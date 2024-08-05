@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { LinkedinService } from './service/linkedin.service';
 
 @Component({
   selector: 'app-root',
@@ -10,4 +11,12 @@ import { RouterOutlet } from '@angular/router';
 })
 export class AppComponent {
   title = 'mattpitts-site';
+  linkedInAuthUrl: string;
+
+  constructor(private  linkedin: LinkedinService) {
+    this.linkedInAuthUrl =this.linkedin.authClient.generateMemberAuthorizationUrl(['r_liteprofile'])
+  }
+
+  loadLinkedInProfile() {
+  }
 }
