@@ -35,4 +35,4 @@ jobs:
 
     - name: Deploy
       if: success()
-      run: aws s3 sync ./dist/mattpitts-site/browser s3://hirematt
+      run: aws s3 sync ./dist/mattpitts-site/browser s3://hirematt.gopitts.net
