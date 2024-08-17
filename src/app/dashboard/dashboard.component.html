@@ -1,0 +1,74 @@
+<div class="grid-container">
+  <mat-grid-list cols="3" rowHeight="200px">
+    <mat-grid-tile [colspan]="3" [rowspan]="1">
+      <mat-card class="dashboard-card">
+        <mat-card-header>
+          <mat-card-title>
+            <h1 class="mat-h1">Meet Matt Pitts</h1>
+          </mat-card-title>
+        </mat-card-header>
+        <mat-card-content class="dashboard-card-content">
+          <div>Hello, and thank you for visiting. This site is about me, a career software and engineering professional,
+            and acts as a small demonstration of some of my experience.</div>
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="2" [rowspan]="3">
+      <mat-card class="dashboard-card">
+        <mat-card-header>
+          <mat-card-title>
+            <h3>About This Site</h3>
+          </mat-card-title>
+        </mat-card-header>
+        <mat-card-content class="dashboard-card-content">
+          <p>This site is meant to demonstrate some of my skills and experience throughout the entire software
+            lifecycle.</p>
+          <p>The site is an <a href="https://angular.dev" target="_blank">Angular</a> application that is built, tested,
+            packaged and deployed
+            into a hosting environment completely with CI/CD (Continuous Integration/Continuous Delivery) automation.
+            The source code for the project
+            is hosted as a public github repository.
+          </p>
+          <h5>Realtime Resume</h5>
+          <p>This site also contains a component to render my personal resume as a web page using live information from
+            my LinkedIn profile. This is accomplished using the LinkedIn API and it allows myself, or anyone else, to
+            view
+            a nicely styled resume that is always up-to-date with my LinkedIn profile. This demonstrates my experience
+            working with APIs along with OAuth authentication.
+          </p>
+
+          <h5>Fully Automated Build, Test, Deploy</h5>
+          <p>
+            This application's CI/CD is automated using <a href="https://docs.github.com/en/actions"
+              target="_blank">GitHub Actions</a>. The steps are defined in a <i>workflows</i> file contained
+            within the project's source and are executed each time there is a push to the <code>main</code> branch of
+            the project. This means that any change to the project that is pushed or merged onto
+            the project's default <code>git</code> branch is automatically executed in the CI/CD pipeline and the
+            application is re-deployed into is hosting environment.
+          </p>
+
+          <h5>Hosting</h5>
+          <p>
+            This application is hosted as a static website within an AWS (Amazon Web Services) S3 bucket. The bucket is
+            configured to allow serving of the files within it as a static website.
+          </p>
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="1" [rowspan]="3">
+      <mat-card class="dashboard-card">
+        <mat-card-header>
+          <mat-card-title>
+            Links
+          </mat-card-title>
+        </mat-card-header>
+        <mat-card-content class="dashboard-card-content">
+          <button mat-raised-button matBadge="8" matBadgePosition="before">
+            LinkedIn
+          </button>
+          <a mat-raised-button matBadge="8" matBadgePosition="before" routerLink="/resume">Resume</a>
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>
