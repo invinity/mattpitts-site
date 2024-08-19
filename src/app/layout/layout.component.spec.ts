@@ -2,6 +2,8 @@ import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 import { LayoutComponent } from './layout.component';
+import { ActivatedRoute, RouterModule } from '@angular/router';
+import { of } from 'rxjs';
 
 describe('LayoutComponent', () => {
   let component: LayoutComponent;
@@ -9,7 +11,15 @@ describe('LayoutComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      imports: [NoopAnimationsModule]
+      imports: [NoopAnimationsModule, RouterModule],
+      providers: [
+        {
+          provide: ActivatedRoute,
+          useValue: {
+            queryParams: of({ }),
+          },
+        }
+      ],
     }).compileComponents();
   }));
 
