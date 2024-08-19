@@ -21,7 +21,7 @@ import { RouterLink } from '@angular/router';
     MatIconModule,
     MatButtonModule,
     MatCardModule,
-    RouterLink
+    RouterLink,
   ]
 })
 export class DashboardComponent {
