@@ -12,12 +12,8 @@ import { LinkedinService } from './service/linkedin.service';
 })
 export class AppComponent {
   title = 'Meet Matt Pitts';
-  linkedInAuthUrl: string;
 
-  constructor(private linkedin: LinkedinService) {
-    this.linkedInAuthUrl = this.linkedin.authClient.generateMemberAuthorizationUrl(['r_liteprofile'])
+  constructor() {
   }
 
-  loadLinkedInProfile() {
-  }
 }

@@ -2,166 +2,92 @@
 @use "./app/layout/layout-component.theme";
 @use 'sass:map';
 
-html,
-body {
-  height: 100%;
+$theme: mat.define-theme((color: (theme-type: dark,
+        primary: mat.$cyan-palette,
+        tertiary: mat.$orange-palette,
+        use-system-variables: true),
+      typography: (brand-family: 'Roboto, Helvetica Neue Light, Helvetica Neue, Helvetica, Arial, Lucida Grande, sans-serif',
+        bold-weight: 400,
+        use-system-variables: false),
+      density: (scale: -1)));
+
+@include mat.core();
+@include mat.color-variants-backwards-compatibility($theme);
+
+:root {
+  @include mat.all-component-themes($theme);
+  @include layout-component.theme($theme);
 }
 
 body {
   margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
-h1, h2, h3, h4, h5 {
+h1,
+h2,
+h3,
+h4 {
   font-weight: normal;
 }
 
-@include mat.core();
-
-$theme: mat.define-theme((color: (theme-type: dark,
-        primary: mat.$azure-palette,
-        tertiary: mat.$blue-palette,
-      ),
-      density: (scale: 0,
-      ),
-    ));
-
-
-// Note: Color palettes are generated from primary: #008080
-$_palettes: (
-  primary: (0: #000000,
-    10: #002020,
-    20: #003737,
-    25: #004343,
-    30: #004f4f,
-    35: #005c5c,
-    40: #006a6a,
-    50: #008585,
-    60: #00a1a1,
-    70: #1ebebe,
-    80: #4cdada,
-    90: #6ff7f6,
-    95: #adfffe,
-    98: #e2fffe,
-    99: #f1fffe,
-    100: #ffffff,
-  ),
-  secondary: (0: #000000,
-    10: #051f1f,
-    20: #1b3534,
-    25: #27403f,
-    30: #324b4b,
-    35: #3e5757,
-    40: #4a6363,
-    50: #627c7b,
-    60: #7b9695,
-    70: #95b0b0,
-    80: #b0cccb,
-    90: #cce8e7,
-    95: #daf6f5,
-    98: #e3fffe,
-    99: #f1fffe,
-    100: #ffffff,
-  ),
-  tertiary: (0: #000000,
-    10: #041c35,
-    20: #1c314b,
-    25: #283d57,
-    30: #334863,
-    35: #3f546f,
-    40: #4b607c,
-    50: #647896,
-    60: #7d92b1,
-    70: #98adcc,
-    80: #b3c8e8,
-    90: #d3e4ff,
-    95: #eaf1ff,
-    98: #f8f9ff,
-    99: #fdfcff,
-    100: #ffffff,
-  ),
-  neutral: (0: #000000,
-    10: #191c1c,
-    20: #2d3131,
-    25: #383c3c,
-    30: #444747,
-    35: #4f5353,
-    40: #5b5f5f,
-    50: #747877,
-    60: #8e9191,
-    70: #a9acab,
-    80: #c4c7c6,
-    90: #e0e3e2,
-    95: #eff1f0,
-    98: #f7faf9,
-    99: #fafdfc,
-    100: #ffffff,
-    4: #0b0f0f,
-    6: #101414,
-    12: #1d2020,
-    17: #272b2a,
-    22: #323535,
-    24: #363a3a,
-    87: #d8dada,
-    92: #e6e9e8,
-    94: #eceeed,
-    96: #f2f4f3,
-  ),
-  neutral-variant: (0: #000000,
-    10: #141d1d,
-    20: #293232,
-    25: #343d3d,
-    30: #3f4948,
-    35: #4a5454,
-    40: #566060,
-    50: #6f7979,
-    60: #889392,
-    70: #a3adad,
-    80: #bec9c8,
-    90: #dae5e4,
-    95: #e9f3f2,
-    98: #f1fbfa,
-    99: #f4fefd,
-    100: #ffffff,
-  ),
-  error: (0: #000000,
-    10: #410002,
-    20: #690005,
-    25: #7e0007,
-    30: #93000a,
-    35: #a80710,
-    40: #ba1a1a,
-    50: #de3730,
-    60: #ff5449,
-    70: #ff897d,
-    80: #ffb4ab,
-    90: #ffdad6,
-    95: #ffedea,
-    98: #fff8f7,
-    99: #fffbff,
-    100: #ffffff,
-  ),
-);
-
-$_rest: (
-  secondary: map.get($_palettes, secondary),
-  neutral: map.get($_palettes, neutral),
-  neutral-variant: map.get($_palettes, neutral-variant),
-  error: map.get($_palettes, error),
-);
-$_primary: map.merge(map.get($_palettes, primary), $_rest);
-$_tertiary: map.merge(map.get($_palettes, tertiary), $_rest);
-
-$my-theme: mat.define-theme((color: (theme-type: dark,
-        primary: $_primary,
-        tertiary: $_tertiary,
-        use-system-variables: false,
-      ),
-      typography: (use-system-variables: false,
-      ),
-    ));
-
-:root {
-  @include mat.all-component-themes($my-theme);
-  @include layout-component.theme($my-theme);
+:root,
+:host {
+  --sys-background: #f7f9ff;
+  --sys-on-background: #181c20;
+  --sys-surface: #f7f9ff;
+  --sys-surface-dim: #d8dae0;
+  --sys-surface-bright: #f7f9ff;
+  --sys-surface-container-lowest: #ffffff;
+  --sys-surface-container-low: #f1f3f9;
+  --sys-surface-container: #eceef3;
+  --sys-surface-container-high: #e6e8ee;
+  --sys-surface-container-highest: #e0e2e8;
+  --sys-on-surface: #181c20;
+  --sys-surface-variant: #dee3eb;
+  --sys-on-surface-variant: #42474e;
+  --sys-inverse-surface: #2d3135;
+  --sys-inverse-on-surface: #eff1f6;
+  --sys-outline: #72787e;
+  --sys-outline-variant: #c2c7ce;
+  --sys-shadow: #000000;
+  --sys-scrim: #000000;
+  --sys-surface-tint: #2d628b;
+  --sys-primary: #2d628b;
+  --sys-on-primary: #ffffff;
+  --sys-primary-container: #cde5ff;
+  --sys-on-primary-container: #0a4a72;
+  --sys-inverse-primary: #9acbfa;
+  --sys-secondary: #2d638b;
+  --sys-on-secondary: #ffffff;
+  --sys-secondary-container: #cde5ff;
+  --sys-on-secondary-container: #084b72;
+  --sys-tertiary: #6b538c;
+  --sys-on-tertiary: #ffffff;
+  --sys-tertiary-container: #eddcff;
+  --sys-on-tertiary-container: #533c72;
+  --sys-error: #904a43;
+  --sys-on-error: #ffffff;
+  --sys-error-container: #ffdad5;
+  --sys-on-error-container: #73342d;
+  --sys-neutral: #74777c;
+  --sys-neutral-variant: #72787f;
+  --sys-primary-fixed: #cde5ff;
+  --sys-primary-fixed-dim: #9acbfa;
+  --sys-on-primary-fixed: #001d32;
+  --sys-on-primary-fixed-variant: #0a4a72;
+  --sys-secondary-fixed: #cde5ff;
+  --sys-secondary-fixed-dim: #99ccfa;
+  --sys-on-secondary-fixed: #001d32;
+  --sys-on-secondary-fixed-variant: #084b72;
+  --sys-tertiary-fixed: #eddcff;
+  --sys-tertiary-fixed-dim: #d7bafb;
+  --sys-on-tertiary-fixed: #260e44;
+  --sys-on-tertiary-fixed-variant: #533c72;
+  --sys-inverse-secondary: #99ccfa;
+  --sys-inverse-tertiary: #d7bafb;
+  --sys-inverse-error: #ffb4ab;
+  --sys-error-fixed: #ffdad5;
+  --sys-error-fixed-dim: #ffb4ab;
+  --sys-on-error-fixed: #3b0907;
+  --sys-on-error-fixed-variant: #73342d;
 }

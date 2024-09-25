@@ -6,14 +6,17 @@ import { RestliClient, LIGetResponse, AuthClient } from 'linkedin-api-client';
 })
 export class LinkedinService {
   restliClient = new RestliClient();
-  authClient = new AuthClient({ clientId: 'xxxxx', clientSecret: 'xxxxxxx', redirectUrl: 'http://localhost:4200/' });
+  authClient = new AuthClient({ clientId: '78rnobs27v0cz1', clientSecret: 'HEQnXW7ZTCUB8k8u', redirectUrl: 'http://localhost:4200/' });
 
   constructor() { }
 
-  readUserData(username: String): Promise<LIGetResponse> {
-    return this.restliClient.get({
-      resourcePath: '/me',
-      accessToken: ''
+  readUserData(userAccessToken: string): Promise<void | LIGetResponse> {
+    return this.authClient.exchangeAuthCodeForAccessToken(userAccessToken)
+    .then(resp => {
+      this.restliClient.get({
+        resourcePath: '/me',
+        accessToken: resp.access_token
+      });
     });
   }
 }
