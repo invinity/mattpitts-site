@@ -14,7 +14,7 @@ import { MatIcon } from '@angular/material/icon';
 export class ResumeComponent implements OnInit {
   profile: any | undefined
 
-  constructor(private linkedin: RealLinkedinService) {
+  constructor(@Inject(LINKEDIN_SERVICE) private linkedin: LinkedinService) {
   }
 
   ngOnInit(): void {
