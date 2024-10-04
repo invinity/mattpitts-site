@@ -1,5 +1,6 @@
-<div class="resume-container">
-    <div class="resume">
+<div class="resume-container" >
+    <div class="resume" [hidden]="profileLoaded"><mat-progress-bar mode="indeterminate"></mat-progress-bar>Rendering resume, please wait.</div>
+    <div class="resume" [hidden]="!profileLoaded">
         <h1 class="resume-name">{{ profile.Name }}</h1>
         <div class="resume-headline">{{ profile.Headline }}</div>
         <div class="resume-info-bar">
