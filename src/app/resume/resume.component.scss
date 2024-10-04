@@ -3,7 +3,7 @@
     flex-flow: row wrap;
     align-items: center;
     justify-content: center;
-
+    color: #384347;
     font-family: Rubik, Arial, Helvetica, "Noto Sans Devanagari", "Noto Sans CJK SC Thin", "Noto Sans SC", "Noto Sans Hebrew", sans-serif;
 }
 
@@ -24,7 +24,8 @@
     font-weight: 400;
     color: #65696d;
     text-transform: uppercase;
-    border-bottom: 2px solid
+    margin-top: 1em;
+    border-bottom: 2px solid rgba(101, 105, 109, .5);
 }
 
 .resume-name {
@@ -33,6 +34,8 @@
 
 .institution-name {
     color: rgb(0, 182, 203);
+    font-weight: 400;
+    margin-top: 4px;
 }
 
 .position-title {
@@ -47,4 +50,17 @@
     font-size: 13px;
     line-height: 16px;
     margin-left: 1em;
+}
+
+.resume-dates {
+    font-size: small;
+}
+
+.resume-info-bar {
+    padding: .5em;
+}
+
+.resume-info-bar mat-icon {
+    padding-right: .5em;
+    padding-left: 1em;
 }

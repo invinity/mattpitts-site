@@ -29,18 +29,18 @@ import { routes } from '../app.routes';
   ]
 })
 export class LayoutComponent {
-  rootRoutes = routes.filter(r => r.path);
-  private breakpointObserver = inject(BreakpointObserver);
-
+  rootRoutes = routes.filter(r => r.path)
+  private breakpointObserver = inject(BreakpointObserver)
+  isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
+    .pipe(
+      map(result => result.matches),
+      shareReplay()
+    )
   title: string | undefined
 
   constructor(readonly activatedRoute: ActivatedRoute) {
     activatedRoute.title.subscribe(t => this.title = t)
   }
 
-  isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
-    .pipe(
-      map(result => result.matches),
-      shareReplay()
-    );
+
 }
