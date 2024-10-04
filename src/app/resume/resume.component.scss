@@ -1,0 +1,50 @@
+.resume-container {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+
+    font-family: Rubik, Arial, Helvetica, "Noto Sans Devanagari", "Noto Sans CJK SC Thin", "Noto Sans SC", "Noto Sans Hebrew", sans-serif;
+}
+
+.resume {
+    max-width: 940px;
+    position: relative;
+    width: 100%;
+}
+
+.resume-grid {
+    grid-auto-columns: 1fr 40%;
+    column-gap: 16px;
+    grid-auto-flow: column;
+    display: grid;
+}
+
+.resume-section-name {
+    font-weight: 400;
+    color: #65696d;
+    text-transform: uppercase;
+    border-bottom: 2px solid
+}
+
+.resume-name {
+    text-transform: uppercase;
+}
+
+.institution-name {
+    color: rgb(0, 182, 203);
+}
+
+.position-title {
+    color: rgb(52, 51, 52);
+    font-size: 17px;
+    line-height: 20px;
+    white-space: pre-wrap;
+}
+
+.description-section {
+    font-family: Inter, Arial, Helvetica, "Noto Sans Devanagari", "Noto Sans CJK SC Thin", "Noto Sans SC", "Noto Sans Hebrew", sans-serif;
+    font-size: 13px;
+    line-height: 16px;
+    margin-left: 1em;
+}

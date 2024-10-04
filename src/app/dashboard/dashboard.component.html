@@ -13,6 +13,34 @@
         </mat-card-content>
       </mat-card>
     </mat-grid-tile>
+    <mat-grid-tile [colspan]="2" [rowspan]="1">
+      <mat-card class="dashboard-card" appearance="outlined">
+        <mat-card-header>
+          <mat-card-title>
+            <h2>TL;DR - Just take me to the good stuff</h2>
+          </mat-card-title>
+        </mat-card-header>
+        <mat-card-content class="dashboard-card-content">
+          <a href="https://github.com/invinity/mattpitts-site">This site's <i class="skill">Angular</i> project in Github</a>
+          <a href="https://github.com/invinity/linkedin-profile-grabber">This site's backing LinkedIn profile-grabber <i class="skill">Golang</i> project in Github</a>
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="1" [rowspan]="6">
+      <mat-card class="dashboard-card" appearance="outlined">
+        <mat-card-header>
+          <mat-card-title>
+            Links
+          </mat-card-title>
+        </mat-card-header>
+        <mat-card-content class="dashboard-card-content">
+          <button mat-raised-button matBadge="8" matBadgePosition="before">
+            LinkedIn
+          </button>
+          <a mat-raised-button matBadge="8" matBadgePosition="before" routerLink="/resume">Resume</a>
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
     <mat-grid-tile [colspan]="2" [rowspan]="5">
       <mat-card class="dashboard-card" appearance="outlined">
         <mat-card-header>
@@ -55,21 +83,6 @@
             This application is hosted as a static website within an AWS (Amazon Web Services) S3 bucket. The bucket is
             configured to allow serving of the files within it as a static website.
           </p>
-        </mat-card-content>
-      </mat-card>
-    </mat-grid-tile>
-    <mat-grid-tile [colspan]="1" [rowspan]="5">
-      <mat-card class="dashboard-card" appearance="outlined">
-        <mat-card-header>
-          <mat-card-title>
-            Links
-          </mat-card-title>
-        </mat-card-header>
-        <mat-card-content class="dashboard-card-content">
-          <button mat-raised-button matBadge="8" matBadgePosition="before">
-            LinkedIn
-          </button>
-          <a mat-raised-button matBadge="8" matBadgePosition="before" routerLink="/resume">Resume</a>
         </mat-card-content>
       </mat-card>
     </mat-grid-tile>

@@ -1,4 +1,41 @@
-<p>resume works!</p>
-<a [href]="linkedInAuthUrl">login</a>
-<a (click)="loadLinkedInProfile()">load</a>
-<pre>{{ userdata }}</pre>
+<div class="resume-container">
+    <div class="resume">
+        <h1 class="resume-name">{{ profile.Name }}</h1>
+        <h3>{{ profile.Headline }}</h3>
+        <div class="resume-grid">
+            <div class="resume-left-column">
+                <h3 class="resume-section-name">Experience</h3>
+                <div *ngFor="let experience of profile.Experience">
+                    <h4 class="institution-name">{{ experience.Company }}</h4>
+                    <div *ngFor="let position of experience.Positions">
+                        <h3 class="position-title">{{ position.Title }}</h3>
+                        <h4>{{ position.StartDate }} - {{ position.EndDate }}</h4>
+                        <app-description [text]="position.Description"></app-description>
+                    </div>
+                </div>
+                <h3 class="resume-section-name">Education</h3>
+                <div *ngFor="let i of profile.Education">
+                    <h4>{{ i.Subtitle }}</h4>
+                    <h3 class="institution-name">{{ i.Title }}</h3>
+                    <h5>{{ i.StartDate }} - {{ i.EndDate }}</h5>
+                    <app-description [text]="i.Description"></app-description>
+                </div>
+            </div>
+
+            <div class="resume-right-column">
+                <h3 class="resume-section-name">Summary</h3>
+                <p>{{ profile.Summary }}</p>
+
+                <h3 class="resume-section-name">Projects</h3>
+                <div *ngFor="let i of profile.Projects">
+                    <h3 class="position-title">{{ i.Title }}</h3>
+                    <h5>{{ i.StartDate }} - {{ i.EndDate }}</h5>
+                    <app-description [text]="i.Description"></app-description>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<hr />
+<pre>{{ profile | json }}</pre>

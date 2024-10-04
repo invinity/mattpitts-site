@@ -1,25 +1,28 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { LinkedinService } from '../service/linkedin.service';
-import { RestliEntity } from 'linkedin-api-client';
+import { JsonPipe, NgFor } from '@angular/common';
+import { DescriptionComponent } from "./widget/description/description.component";
 
 @Component({
   selector: 'app-resume',
   standalone: true,
-  imports: [],
+  imports: [JsonPipe, NgFor, DescriptionComponent],
   templateUrl: './resume.component.html',
   styleUrl: './resume.component.scss'
 })
-export class ResumeComponent {
-  linkedInAuthUrl: string;
-  userdata: RestliEntity | undefined;
+export class ResumeComponent implements OnInit {
+  profile: any | undefined
 
   constructor(private linkedin: LinkedinService) {
-    this.linkedInAuthUrl = this.linkedin.authClient.generateMemberAuthorizationUrl(['openid', 'profile'])
+  }
+
+  ngOnInit(): void {
+    this.loadLinkedInProfile()
   }
 
   loadLinkedInProfile() {
-    this.linkedin.readUserData('AQSXHlEgwI1u6A99cFFd-90DTotB1p09JKu2awLV8br-66DyUQDRsL9NGf43KsPJusIziYMdiTIlwj6tQVQxE4c6JPp_GErR_MfRrfTRnHAb8Xag6B1LoR9BiAwK5_yorF9sHQTxjPZV-Q205i1Q69X-6Mu7pxI2mv5PeDP56y9wbphexYpE9qjtQcUrrk12o-8kKszIdUKT0uFe0Eo').then(data => {
-      alert(data);
+    this.linkedin.retrieveProfileData().subscribe(data => {
+      this.profile = data;
     });
   }
 }
