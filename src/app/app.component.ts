@@ -11,7 +11,6 @@ import { LinkedinService } from './service/linkedin.service';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'Meet Matt Pitts';
 
   constructor() {
   }

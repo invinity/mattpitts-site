@@ -17,6 +17,7 @@ describe('LayoutComponent', () => {
           provide: ActivatedRoute,
           useValue: {
             queryParams: of({ }),
+            title: of("my title")
           },
         }
       ],
@@ -31,5 +32,9 @@ describe('LayoutComponent', () => {
 
   it('should compile', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should have a title', () => {
+    expect(component.title).toEqual('my title');
   });
 });

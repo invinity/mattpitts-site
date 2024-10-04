@@ -19,7 +19,7 @@ describe('DashboardComponent', () => {
             queryParams: of({ }),
           },
         }
-      ],
+      ]
     }).compileComponents();
   }));
 
