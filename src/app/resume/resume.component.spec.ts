@@ -6,6 +6,7 @@ import { HttpTestingController, provideHttpClientTesting } from '@angular/common
 import { provideHttpClient } from '@angular/common/http';
 import { of } from 'rxjs';
 import { Injectable } from '@angular/core';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @Injectable({
@@ -21,7 +22,7 @@ describe('ResumeComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ResumeComponent],
+      imports: [ResumeComponent, NoopAnimationsModule],
       providers: [
         { provide: LINKEDIN_SERVICE, useClass: MockLinkedinService },
         provideHttpClient(),
