@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { LayoutComponent } from './layout/layout.component';
+import { MatIconRegistry } from '@angular/material/icon';
 
 @Component({
   selector: 'app-root',
@@ -9,9 +10,12 @@ import { LayoutComponent } from './layout/layout.component';
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
 
-  constructor() {
+  constructor(private matIconReg: MatIconRegistry) {
   }
-
+  
+  ngOnInit(): void {
+    this.matIconReg.setDefaultFontSetClass('material-symbols-outlined');
+  }
 }

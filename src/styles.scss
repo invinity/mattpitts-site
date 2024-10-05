@@ -30,6 +30,20 @@ h4 {
   font-weight: normal;
 }
 
+@media print {
+  .noprint {
+    display: none;
+  }
+}
+
+.vertically-top {
+  vertical-align: top;
+}
+
+.pull-right {
+  float: right;
+}
+
 :root,
 :host {
   --sys-background: #f7f9ff;

@@ -1,11 +1,14 @@
-<div class="resume-container" >
-    <div class="resume" [hidden]="profileLoaded"><mat-progress-bar mode="indeterminate"></mat-progress-bar>Rendering resume, please wait.</div>
+<div class="resume-container">
+    <div class="resume" [hidden]="profileLoaded"><mat-progress-bar mode="indeterminate"></mat-progress-bar>Rendering
+        resume, please wait.</div>
     <div class="resume" [hidden]="!profileLoaded">
         <h1 class="resume-name">{{ profile.Name }}</h1>
         <div class="resume-headline">{{ profile.Headline }}</div>
         <div class="resume-info-bar">
-            <mat-icon [inline]="true">email</mat-icon><a href="mailto:matt@gopitts.net">matt&#64;gopitts.net</a>
-            <mat-icon [inline]="true">link</mat-icon><a href="https://linkedin.com/in/mattpitts">https://linkedin.com/in/mattpitts</a>
+            <mat-icon class="vertically-top" [inline]="true">email</mat-icon><a
+                href="mailto:matt@gopitts.net">matt&#64;gopitts.net</a>
+            <mat-icon class="vertically-top" [inline]="true">link</mat-icon><a
+                href="https://linkedin.com/in/mattpitts">https://linkedin.com/in/mattpitts</a>
         </div>
         <div class="resume-grid">
             <div class="resume-left-column">
@@ -14,7 +17,11 @@
                     <div *ngFor="let position of experience.Positions">
                         <div class="position-title">{{ position.Title }}</div>
                         <div class="institution-name">{{ experience.Company }}</div>
-                        <div class="resume-dates"><mat-icon [inline]="true">schedule</mat-icon>{{ position.StartDate }} - {{ position.EndDate }}</div>
+                        <div class="resume-subheader">
+                            <mat-icon class="vertically-top" [inline]="true">calendar_month</mat-icon>
+                            {{ position.StartDate }} - {{ position.EndDate || "Present" }}
+                            <span class="pull-right" [hidden]="!position.Location"><mat-icon class="vertically-top" [inline]="true">location_on</mat-icon>{{ position.Location }}</span>
+                        </div>
                         <app-description [text]="position.Description"></app-description>
                     </div>
                 </div>
@@ -22,7 +29,8 @@
                 <div *ngFor="let i of profile.Education">
                     <div>{{ i.Subtitle }}</div>
                     <div class="institution-name">{{ i.Title }}</div>
-                    <div class="resume-dates"><mat-icon [inline]="true">schedule</mat-icon>{{ i.StartDate }} - {{ i.EndDate }}</div>
+                    <div class="resume-subheader"><mat-icon class="vertically-top"
+                            [inline]="true">calendar_month</mat-icon>{{ i.StartDate }} - {{ i.EndDate }}</div>
                     <app-description [text]="i.Description"></app-description>
                 </div>
             </div>
@@ -34,7 +42,8 @@
                 <div class="resume-section-name">Projects</div>
                 <div *ngFor="let i of profile.Projects">
                     <div class="position-title">{{ i.Title }}</div>
-                    <div class="resume-dates"><mat-icon [inline]="true">schedule</mat-icon>{{ i.StartDate }} - {{ i.EndDate }}</div>
+                    <div class="resume-subheader"><mat-icon class="vertically-top"
+                            [inline]="true">calendar_month</mat-icon>{{ i.StartDate }} - {{ i.EndDate }}</div>
                     <app-description [text]="i.Description"></app-description>
                 </div>
             </div>
