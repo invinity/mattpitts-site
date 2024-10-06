@@ -12,3 +12,9 @@
   margin-top: 60px;
   overflow: auto;
 }
+
+@media print {
+  .main-content {
+    margin-top: 0px !important;
+  }
+}
