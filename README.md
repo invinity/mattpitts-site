@@ -1,7 +1,7 @@
 # Matt Pitts Website
 
 This project is meant to be a demonstration of some of my abilities in the software development space. It consists of a fully functional Angular application and also builds and deploys into a hosting environment completely with
-Github Actions.
+Github Actions. You can see the results of this project's hosted output at [my site](https://matt.gopitts.net)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.1.3.
 

@@ -25,7 +25,7 @@ export class ResumeComponent implements OnInit, AfterContentInit {
   }
 
   ngAfterContentInit(): void {
-    this.snackBar.open("Thanks for accessing my resume! The content here is rendered directly from my Linkedin profile information. Feel free to use your browser's print function to save a copy as a PDF for electronic distribution.", 'Dismiss');
+    this.snackBar.open("Thanks for accessing my resume! The content here is rendered directly from my Linkedin profile information. Feel free to use your browser's print function to save a copy as a PDF for electronic distribution.", 'Dismiss', { duration: 30000 });
   }
 
   loadLinkedInProfile() {
