@@ -9,7 +9,8 @@
             <mat-card-content class="dashboard-card-content">
                 <div>Hello, and thank you for visiting. This site is about me, a career software and engineering
                     professional,
-                    and acts as a small demonstration of some of the technologies that I am experienced with using.</div>
+                    and acts as a small demonstration of some of the technologies that I am experienced with using.
+                </div>
             </mat-card-content>
         </mat-card>
 
@@ -47,7 +48,8 @@
                             application
                             that is built, tested,
                             packaged and deployed
-                            into a hosting environment completely with <span class="skill">CI/CD (Continuous Integration/Continuous
+                            into a hosting environment completely with <span class="skill">CI/CD (Continuous
+                                Integration/Continuous
                                 Delivery)</span>
                             automation.
                             The source code for the project
@@ -64,7 +66,8 @@
                         </mat-card-title>
                     </mat-card-header>
                     <mat-card-content class="dashboard-card-content">
-                        <p>This site also contains a component to render my <a routerLink="/resume">personal resume</a> as a web page using live
+                        <p>This site also contains a component to render my <a routerLink="/resume">personal resume</a>
+                            as a web page using live
                             information from
                             my LinkedIn profile. This is accomplished using <a
                                 href="https://github.com/invinity/linkedin-profile-grabber" target="_blank">another
@@ -81,9 +84,12 @@
 
                 <mat-card class="dashboard-card" appearance="outlined">
                     <mat-card-header>
-                        <mat-card-title>
-                            <h3>Fully Automated Build, Test, Deploy</h3>
-                        </mat-card-title>
+                        <mat-card-title-group>
+                            <mat-card-title>
+                                <h3>Fully Automated Build, Test, Deploy</h3>
+                            </mat-card-title>
+                            <img alt="Github Actions latest result" src="https://github.com/invinity/mattpitts-site/actions/workflows/ng-build-deploy.yml/badge.svg" style="width: 217px; height: 25px; vertical-align: middle; margin: auto 0px;">
+                        </mat-card-title-group>
                     </mat-card-header>
                     <mat-card-content class="dashboard-card-content">
                         <p>
@@ -123,13 +129,17 @@
                     </mat-card-header>
                     <mat-card-content class="dashboard-card-content">
                         <p>
-                            The Angular application for this site is hosted as a static website within an <span class="skill">AWS (Amazon
-                            Web Services) S3</span>
-                            bucket. The bucket is
-                            configured to allow serving of the files within it as a static website.
+                            The Angular application for this site is hosted as a static website within an <span
+                                class="skill">AWS (Amazon
+                                Web Services) S3</span>
+                            bucket. The bucket holds the site's constructed Angular output files, while an <span
+                                class="skill">AWS CloudFront</span> distribution
+                            is setup to serve the actual files via <span class="skill">HTTP</span> requests, as well as
+                            providing <span class="skill">Transport Layer Security (TLS)</span> for the site.
                         </p>
 
-                        <p>For the <span class="skill">Golang</span> project providing the Linkedin profile data for myself, it is deployed
+                        <p>For the <span class="skill">Golang</span> project providing the Linkedin profile data for
+                            myself, it is deployed
                             as a Docker
                             container into <a href="https://cloud.google.com/run?hl=en" target="_blank">Google Cloud
                                 Run</a>
@@ -146,7 +156,8 @@
                         </mat-card-title>
                     </mat-card-header>
                     <mat-card-content class="dashboard-card-content">
-                        <a mat-raised-button matBadge="8" matBadgePosition="before" href="https://linkedin.com/in/mattpitts" target="_blank">
+                        <a mat-raised-button matBadge="8" matBadgePosition="before"
+                            href="https://linkedin.com/in/mattpitts" target="_blank">
                             LinkedIn
                         </a>
                         <a mat-raised-button matBadge="8" matBadgePosition="before" routerLink="/resume">Resume</a>
