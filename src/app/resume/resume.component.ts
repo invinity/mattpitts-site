@@ -13,15 +13,18 @@ import {MatSnackBar, MatSnackBarContainer, MatSnackBarModule} from '@angular/mat
   templateUrl: './resume.component.html',
   styleUrl: './resume.component.scss'
 })
-export class ResumeComponent implements AfterContentInit {
+export class ResumeComponent implements OnInit, AfterContentInit {
   profile: any | undefined
   profileLoaded = false
 
   constructor(@Inject(LINKEDIN_SERVICE) private linkedin: LinkedinService, private snackBar: MatSnackBar) {
   }
 
-  ngAfterContentInit(): void {
+  ngOnInit(): void {
     this.loadLinkedInProfile()
+  }
+
+  ngAfterContentInit(): void {
     this.snackBar.open("Thanks for accessing my resume! The content here is rendered directly from my Linkedin profile information. Feel free to use your browser's print function to save a copy as a PDF for electronic distribution.", 'Dismiss');
   }
 

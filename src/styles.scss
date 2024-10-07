@@ -30,6 +30,11 @@ h4 {
   font-weight: normal;
 }
 
+.skill {
+  border-bottom: dashed 1px darkgray;
+  font-style: italic;
+}
+
 @media print {
   .noprint {
     display: none;

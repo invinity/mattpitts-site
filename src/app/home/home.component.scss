@@ -1,0 +1,26 @@
+.home-grid-container {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    color: #384347;
+    font-family: Rubik, Arial, Helvetica, "Noto Sans Devanagari", "Noto Sans CJK SC Thin", "Noto Sans SC", "Noto Sans Hebrew", sans-serif;
+}
+
+.home {
+    // max-width: 1200px;
+    position: relative;
+    width: 100%;
+    padding: 2em;
+}
+
+.home-grid {
+    grid-auto-columns: 1fr 40%;
+    column-gap: 16px;
+    grid-auto-flow: column;
+    display: grid;
+}
+
+.dashboard-card {
+    margin: 1em;
+}

@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { AsyncPipe, JsonPipe } from '@angular/common';
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -7,8 +7,8 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { MatIconModule } from '@angular/material/icon';
 import { Observable } from 'rxjs';
-import { map, shareReplay } from 'rxjs/operators';
-import { ActivatedRoute, RouterLink, RouterLinkActive } from '@angular/router';
+import { filter, map, shareReplay, take } from 'rxjs/operators';
+import { ActivatedRoute, ActivationEnd, Router, RouterLink, RouterLinkActive } from '@angular/router';
 import { routes } from '../app.routes';
 
 @Component({
@@ -28,7 +28,7 @@ import { routes } from '../app.routes';
     JsonPipe
   ]
 })
-export class LayoutComponent {
+export class LayoutComponent implements OnInit {
   rootRoutes = routes.filter(r => r.path)
   private breakpointObserver = inject(BreakpointObserver)
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
@@ -38,9 +38,20 @@ export class LayoutComponent {
     )
   title: string | undefined
 
-  constructor(readonly activatedRoute: ActivatedRoute) {
-    activatedRoute.title.subscribe(t => this.title = t)
+  constructor(private router: Router, private activatedRoute: ActivatedRoute) {
   }
 
+  ngOnInit(): void {
+    this.router
+      .events.pipe(
+        filter(event => event instanceof ActivationEnd && event.snapshot.children.length == 0),
+        take(1),
+        map(e => {
+          return (e as ActivationEnd).snapshot.title
+        })
+      ).subscribe(t => {
+        this.title = t
+      });
+  }
 
 }
