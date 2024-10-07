@@ -2,12 +2,14 @@ import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 import { LayoutComponent } from './layout.component';
-import { ActivatedRoute, RouterModule } from '@angular/router';
-import { of } from 'rxjs';
+import { ActivatedRoute, ActivatedRouteSnapshot, ActivationEnd, NavigationEnd, Router, RouterModule, UrlSegment } from '@angular/router';
+import { BehaviorSubject, of } from 'rxjs';
 
 describe('LayoutComponent', () => {
   let component: LayoutComponent;
-  let fixture: ComponentFixture<LayoutComponent>;
+  let fixture: ComponentFixture<LayoutComponent>
+  let routerEvents = new BehaviorSubject<any>('test')
+  let router: Router
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
@@ -16,7 +18,7 @@ describe('LayoutComponent', () => {
         {
           provide: ActivatedRoute,
           useValue: {
-            queryParams: of({ }),
+            queryParams: of({}),
             title: of("my title")
           },
         }
@@ -25,16 +27,23 @@ describe('LayoutComponent', () => {
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(LayoutComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
+    router = TestBed.inject(Router)
+    spyOnProperty(router, 'events', 'get').and.returnValue(routerEvents)
+    fixture = TestBed.createComponent(LayoutComponent)
+    component = fixture.componentInstance
+    fixture.detectChanges()
   });
 
   it('should compile', () => {
-    expect(component).toBeTruthy();
+    expect(component).toBeTruthy()
   });
 
-  it('should have a title', () => {
+  it('should acquire page title from NavigationEnd event', () => {
+    const mockRoute = {title: 'my title', children: []} as unknown as ActivatedRouteSnapshot
+    const navEvent = new ActivationEnd(mockRoute)
+    routerEvents.next(navEvent);
+    fixture.detectChanges();
     expect(component.title).toEqual('my title');
   });
 });
+

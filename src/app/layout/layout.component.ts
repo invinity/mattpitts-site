@@ -8,7 +8,7 @@ import { MatListModule } from '@angular/material/list';
 import { MatIconModule } from '@angular/material/icon';
 import { Observable } from 'rxjs';
 import { filter, map, shareReplay, take } from 'rxjs/operators';
-import { ActivatedRoute, ActivationEnd, Router, RouterLink, RouterLinkActive } from '@angular/router';
+import { ActivationEnd, Router, RouterLink, RouterLinkActive } from '@angular/router';
 import { routes } from '../app.routes';
 
 @Component({
@@ -38,7 +38,7 @@ export class LayoutComponent implements OnInit {
     )
   title: string | undefined
 
-  constructor(private router: Router, private activatedRoute: ActivatedRoute) {
+  constructor(private router: Router) {
   }
 
   ngOnInit(): void {
