@@ -2,8 +2,8 @@
     <div class="resume" [hidden]="profileLoaded"><mat-progress-bar mode="indeterminate"></mat-progress-bar>Rendering
         resume, please wait.</div>
     <div class="resume" [hidden]="!profileLoaded">
-        <h1 class="resume-name">{{ profile.Name }}</h1>
-        <div class="resume-headline">{{ profile.Headline }}</div>
+        <h1 class="resume-name">{{ profile?.Name }}</h1>
+        <div class="resume-headline">{{ profile?.Headline }}</div>
         <div class="resume-info-bar">
             <mat-icon class="vertically-top" [inline]="true">email</mat-icon><a
                 href="mailto:matt@gopitts.net">matt&#64;gopitts.net</a>
@@ -13,7 +13,7 @@
         <div class="resume-grid">
             <div class="resume-left-column">
                 <div class="resume-section-name">Experience</div>
-                <div *ngFor="let experience of profile.Experience">
+                <div *ngFor="let experience of profile?.Experience">
                     <div *ngFor="let position of experience.Positions">
                         <div class="position-title">{{ position.Title }}</div>
                         <div class="institution-name">{{ experience.Company }}</div>
@@ -26,7 +26,7 @@
                     </div>
                 </div>
                 <div class="resume-section-name">Education</div>
-                <div *ngFor="let i of profile.Education">
+                <div *ngFor="let i of profile?.Education">
                     <div>{{ i.Subtitle }}</div>
                     <div class="institution-name">{{ i.Title }}</div>
                     <div class="resume-subheader"><mat-icon class="vertically-top"
@@ -37,10 +37,10 @@
 
             <div class="resume-right-column">
                 <div class="resume-section-name">Summary</div>
-                <p>{{ profile.Summary }}</p>
+                <p>{{ profile?.Summary }}</p>
 
                 <div class="resume-section-name">Projects</div>
-                <div *ngFor="let i of profile.Projects">
+                <div *ngFor="let i of profile?.Projects">
                     <div class="position-title">{{ i.Title }}</div>
                     <div class="resume-subheader"><mat-icon class="vertically-top"
                             [inline]="true">calendar_month</mat-icon>{{ i.StartDate }} - {{ i.EndDate }}</div>

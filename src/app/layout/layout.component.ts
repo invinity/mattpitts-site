@@ -45,7 +45,6 @@ export class LayoutComponent implements OnInit {
     this.router
       .events.pipe(
         filter(event => event instanceof ActivationEnd && event.snapshot.children.length == 0),
-        take(1),
         map(e => {
           return (e as ActivationEnd).snapshot.title
         })
