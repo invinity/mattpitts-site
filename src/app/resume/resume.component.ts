@@ -13,7 +13,7 @@ import {MatSnackBar, MatSnackBarContainer, MatSnackBarModule} from '@angular/mat
   templateUrl: './resume.component.html',
   styleUrl: './resume.component.scss'
 })
-export class ResumeComponent implements OnInit, AfterContentInit {
+export class ResumeComponent implements OnInit {
   profile: any | undefined
   profileLoaded = false
 
@@ -24,14 +24,12 @@ export class ResumeComponent implements OnInit, AfterContentInit {
     this.loadLinkedInProfile()
   }
 
-  ngAfterContentInit(): void {
-    this.snackBar.open("Thanks for accessing my resume! The content here is rendered directly from my Linkedin profile information. Feel free to use your browser's print function to save a copy as a PDF for electronic distribution.", 'Dismiss', { duration: 30000 });
-  }
 
   loadLinkedInProfile() {
     this.linkedin.retrieveProfileData().subscribe(data => {
       this.profile = data
       this.profileLoaded = true
+      this.snackBar.open("Thanks for accessing my resume! The content here is rendered directly from my Linkedin profile information. Feel free to use your browser's print function to save a copy as a PDF for electronic distribution.", 'Dismiss', { duration: 30000 });
     });
   }
 }
