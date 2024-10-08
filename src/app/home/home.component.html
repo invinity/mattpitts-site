@@ -46,6 +46,15 @@
                         </mat-card-title>
                     </mat-card-header>
                     <mat-card-content class="dashboard-card-content">
+                        <h5>Links to the projects behind this site in Github</h5>
+                        <ul>
+                            <li><a href="https://github.com/invinity/mattpitts-site" target="_blank">This site's <i
+                                        class="skill">Angular</i> project in
+                                    Github</a></li>
+                            <li><a href="https://github.com/invinity/linkedin-profile-grabber" target="_blank">This
+                                    site's backing LinkedIn
+                                    profile-grabber <span class="skill">Golang</span> project in Github</a></li>
+                        </ul>
                         <h5>Tools used to author, build and host this site</h5>
                         <ul>
                             <li><a href="https://angular.dev" target="_blank">Angular for UI framework</a></li>
@@ -70,15 +79,6 @@
                             <li><span class="skill">Transport Layer Security (TLS)</span></li>
                             <li><span class="skill">Representational State Transfer (REST)</span></li>
                         </ul>
-                        <h5>Links to the projects hosted in Github</h5>
-                        <ul>
-                            <li><a href="https://github.com/invinity/mattpitts-site" target="_blank">This site's <i
-                                        class="skill">Angular</i> project in
-                                    Github</a></li>
-                            <li><a href="https://github.com/invinity/linkedin-profile-grabber" target="_blank">This
-                                    site's backing LinkedIn
-                                    profile-grabber <span class="skill">Golang</span> project in Github</a></li>
-                        </ul>
                     </mat-card-content>
                 </mat-card>
 
@@ -89,7 +89,7 @@
                         </mat-card-title>
                     </mat-card-header>
                     <mat-card-content class="dashboard-card-content">
-                        <p>This site also contains a component to render my <a routerLink="/resume">personal resume</a>
+                        <p>This site contains a component to render my <a routerLink="/resume">personal resume</a>
                             as a web page using live
                             information from
                             my LinkedIn profile. This is accomplished using <a
@@ -118,7 +118,7 @@
                     </mat-card-header>
                     <mat-card-content class="dashboard-card-content">
                         <p>
-                            This Angular project backing this site has fully-automated CI/CD using <a
+                            The <a href="https://github.com/invinity/mattpitts-site" target="_blank">Angular project</a> backing this site has fully-automated CI/CD using <a
                                 href="https://docs.github.com/en/actions" target="_blank">GitHub Actions</a>. The steps
                             are defined in a
                             <i>workflows</i> file contained
@@ -154,7 +154,7 @@
                     </mat-card-header>
                     <mat-card-content class="dashboard-card-content">
                         <p>
-                            The Angular application for this site is hosted as a static website within an <span
+                            The <a href="https://github.com/invinity/mattpitts-site" target="_blank">Angular application</a> for this site is hosted as a static website within an <span
                                 class="skill">AWS (Amazon
                                 Web Services) S3</span>
                             bucket. The bucket holds the site's constructed Angular output files, while an <span
@@ -163,7 +163,8 @@
                             providing <span class="skill">Transport Layer Security (TLS)</span> for the site.
                         </p>
 
-                        <p>For the <span class="skill">Golang</span> project providing the Linkedin profile data for
+                        <p>For the <a href="https://github.com/invinity/linkedin-profile-grabber"
+                            target="_blank">Golang project</a> providing the Linkedin profile data for
                             myself, it is deployed
                             as a Docker
                             container into <a href="https://cloud.google.com/run?hl=en" target="_blank">Google Cloud

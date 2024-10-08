@@ -12,11 +12,50 @@
                 href="https://linkedin.com/in/mattpitts">https://linkedin.com/in/mattpitts</a>
         </div>
         <div class="resume-grid">
+
             <div class="resume-left-column">
+                <div class="resume-section-name">Summary</div>
+                <p>{{ profile?.Summary }}</p>
+
+                <div class="resume-section-name">Skills</div>
+                <div>
+                    <ul class="skills">
+                        <li>Java</li>
+                        <li>Linux</li>
+                        <li>Team Lead</li>
+                        <li>Continuous Delivery</li>
+                        <li>Continuous Integration</li>
+                        <li>Network Security</li>
+                        <li>AWS</li>
+                        <li>GCP</li>
+                    </ul>
+                </div>
+
+                <div class="resume-section-name">Certifications</div>
+                <div *ngFor="let i of profile?.Certifications">
+                    <div class="print-nopagebreak">
+                        <div class="institution-name">{{ i.Title }}</div>
+                        <div class="">{{ i.Institution }}</div>
+                        <app-description [text]="i.Description"></app-description>
+                    </div>
+                </div>
+
+                <div class="print-nopagebreak">
+                    <div class="resume-section-name">Projects</div>
+                    <div *ngFor="let i of profile?.Projects">
+                        <div class="position-title">{{ i.Title }}</div>
+                        <div class="resume-subheader"><mat-icon class="vertically-top"
+                                [inline]="true">calendar_month</mat-icon>{{ i.StartDate }} - {{ i.EndDate }}</div>
+                        <app-description [text]="i.Description"></app-description>
+                    </div>
+                </div>
+            </div>
+
+            <div class="resume-right-column">
                 <div class="resume-section-name">Experience</div>
                 <div *ngFor="let experience of profile?.Experience">
                     <div *ngFor="let position of experience.Positions">
-                        <div class="resume-section">
+                        <div class="print-nopagebreak">
                             <div class="position-title">{{ position.Title }}</div>
                             <div class="institution-name">{{ experience.Company }}</div>
                             <div class="resume-subheader">
@@ -31,24 +70,9 @@
                 </div>
                 <div class="resume-section-name">Education</div>
                 <div *ngFor="let i of profile?.Education">
-                    <div class="resume-section">
+                    <div class="print-nopagebreak">
                         <div>{{ i.Subtitle }}</div>
                         <div class="institution-name">{{ i.Title }}</div>
-                        <div class="resume-subheader"><mat-icon class="vertically-top"
-                                [inline]="true">calendar_month</mat-icon>{{ i.StartDate }} - {{ i.EndDate }}</div>
-                        <app-description [text]="i.Description"></app-description>
-                    </div>
-                </div>
-            </div>
-
-            <div class="resume-right-column">
-                <div class="resume-section-name">Summary</div>
-                <p>{{ profile?.Summary }}</p>
-
-                <div class="resume-section-name">Projects</div>
-                <div *ngFor="let i of profile?.Projects">
-                    <div class="resume-section">
-                        <div class="position-title">{{ i.Title }}</div>
                         <div class="resume-subheader"><mat-icon class="vertically-top"
                                 [inline]="true">calendar_month</mat-icon>{{ i.StartDate }} - {{ i.EndDate }}</div>
                         <app-description [text]="i.Description"></app-description>
