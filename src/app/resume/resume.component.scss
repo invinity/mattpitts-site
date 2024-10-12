@@ -3,8 +3,6 @@
     flex-flow: row wrap;
     align-items: center;
     justify-content: center;
-    color: #384347;
-    font-family: "Open Sans", Arial, Helvetica, "Noto Sans Devanagari", "Noto Sans CJK SC Thin", "Noto Sans SC", "Noto Sans Hebrew", sans-serif;
 }
 
 .resume {
@@ -15,71 +13,4 @@
     background-color: white;
     padding: 3em;
     box-shadow: 2px 2px 2px 2px rgba(83, 83, 83, .5);
-}
-
-.resume-grid {
-    grid-auto-columns: 1fr 65%;
-    column-gap: 16px;
-    grid-auto-flow: column;
-    display: grid;
-}
-
-.resume-section-name {
-    font-weight: 400;
-    color: #65696d;
-    text-transform: uppercase;
-    margin-top: 1em;
-    border-bottom: 2px solid rgba(101, 105, 109, .5);
-}
-
-.resume-name {
-    text-transform: uppercase;
-    margin-top: 0;
-}
-
-.institution-name {
-    color: rgb(0, 182, 203);
-    font-weight: 400;
-    margin-top: 4px;
-}
-
-.position-title {
-    color: rgb(52, 51, 52);
-    font-size: 17px;
-    line-height: 20px;
-    white-space: pre-wrap;
-}
-
-.resume-subheader {
-    font-size: small;
-}
-
-.resume-info-bar {
-    padding: .5em;
-}
-
-.resume-info-bar mat-icon {
-    padding-right: .25em;
-    padding-left: 1em;
-}
-
-ul.skills {
-    padding-left: 0;
-}
-
-ul.skills > li {
-    display: inline-block;
-    margin: .25em .75em .25em 0px;
-    padding: 0 .25em;
-    border-bottom: 1px solid rgba(101, 105, 109, 0.5);
-}
-
-@media print {
-    .resume {
-        box-shadow: unset !important;
-        margin-top: 0 !important;
-    }
-    .print-nopagebreak {
-        page-break-inside: avoid !important;
-    }
 }

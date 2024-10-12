@@ -1,15 +1,13 @@
-import { AfterContentInit, AfterViewInit, Component, Inject, inject, OnInit } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { LINKEDIN_SERVICE, LinkedinService } from '../service/linkedin.service';
-import { JsonPipe, NgFor } from '@angular/common';
-import { DescriptionComponent } from "./widget/description/description.component";
-import { MatIcon } from '@angular/material/icon';
-import {MatProgressBarModule} from '@angular/material/progress-bar';
-import {MatSnackBar, MatSnackBarContainer, MatSnackBarModule} from '@angular/material/snack-bar'
+import { ElegantComponent } from './template/elegant/elegant.component';
 
 @Component({
   selector: 'app-resume',
   standalone: true,
-  imports: [JsonPipe, NgFor, DescriptionComponent, MatIcon, MatProgressBarModule, MatSnackBarContainer],
+  imports: [ElegantComponent, MatProgressBarModule],
   templateUrl: './resume.component.html',
   styleUrl: './resume.component.scss'
 })
