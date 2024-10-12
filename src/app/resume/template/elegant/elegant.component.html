@@ -34,7 +34,7 @@
                 <div class="print-nopagebreak">
                     <div class="institution-name">{{ i.Title }}</div>
                     <div class="">{{ i.Institution }}</div>
-                    <app-description [text]="i.Description"></app-description>
+                    <elegant-description [text]="i.Description"></elegant-description>
                 </div>
             </div>
 
@@ -44,7 +44,7 @@
                     <div class="position-title">{{ i.Title }}</div>
                     <div class="resume-subheader"><mat-icon class="vertically-top"
                             [inline]="true">calendar_month</mat-icon>{{ i.StartDate }} - {{ i.EndDate }}</div>
-                    <app-description [text]="i.Description"></app-description>
+                    <elegant-description [text]="i.Description"></elegant-description>
                 </div>
             </div>
         </div>
@@ -62,7 +62,7 @@
                             <span class="pull-right" [hidden]="!position.Location"><mat-icon class="vertically-top"
                                     [inline]="true">location_on</mat-icon>{{ position.Location }}</span>
                         </div>
-                        <app-description [text]="position.Description"></app-description>
+                        <elegant-description [text]="position.Description"></elegant-description>
                     </div>
                 </div>
             </div>
@@ -73,7 +73,7 @@
                     <div class="institution-name">{{ i.Title }}</div>
                     <div class="resume-subheader"><mat-icon class="vertically-top"
                             [inline]="true">calendar_month</mat-icon>{{ i.StartDate }} - {{ i.EndDate }}</div>
-                    <app-description [text]="i.Description"></app-description>
+                    <elegant-description [text]="i.Description"></elegant-description>
                 </div>
             </div>
         </div>

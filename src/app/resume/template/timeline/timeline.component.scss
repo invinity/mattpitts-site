@@ -1,0 +1,117 @@
+.resume-root {
+    color: #384347;
+    font-family: "Open Sans", Arial, Helvetica, "Noto Sans Devanagari", "Noto Sans CJK SC Thin", "Noto Sans SC", "Noto Sans Hebrew", sans-serif;
+}
+
+.profile-name {
+    white-space: pre-wrap;
+    padding-bottom: 2px;
+    font-weight: 700;
+    font-family: Montserrat, Arial, Helvetica, "Noto Sans Devanagari", "Noto Sans CJK SC Thin", "Noto Sans SC", "Noto Sans Hebrew", sans-serif;
+    text-transform: uppercase;
+    color: rgb(0, 43, 127);
+    font-size: 34px;
+    line-height: 1;
+}
+
+.profile-headline {
+    white-space: pre-wrap;
+    padding-bottom: 2px;
+    font-weight: 700;
+    font-family: Montserrat, Arial, Helvetica, "Noto Sans Devanagari", "Noto Sans CJK SC Thin", "Noto Sans SC", "Noto Sans Hebrew", sans-serif;
+    color: rgb(249, 107, 7);
+    font-size: 17px;
+    line-height: 21px;
+}
+
+.resume-info-bar {
+    padding: .5em;
+}
+
+.resume-info-bar mat-icon {
+    padding-right: .25em;
+    padding-left: 1em;
+}
+
+.resume-section-name {
+    white-space: pre-wrap;
+    font-weight: 700;
+    font-family: Montserrat, Arial, Helvetica, "Noto Sans Devanagari", "Noto Sans CJK SC Thin", "Noto Sans SC", "Noto Sans Hebrew", sans-serif;
+    color: rgb(0, 43, 127);
+    font-size: 18px;
+    line-height: 22px;
+    text-transform: uppercase;
+    margin-bottom: 1em;
+    padding-top: .5em;
+    border-bottom: 2px solid rgba(101, 105, 109, .5);
+}
+
+.resume-section-content {
+    margin-bottom: 1em;
+    padding-top: 1em;
+}
+
+ul.skills {
+    padding-left: 0;
+    margin-top: 0;
+}
+
+ul.skills>li {
+    display: inline-block;
+    margin: .25em .75em .25em 0px;
+    padding: 0 .25em;
+    border-bottom: 1px solid rgba(101, 105, 109, 0.5);
+}
+
+.timeline {
+    display: grid;
+    grid-template-columns: 4fr 1fr 7fr;
+    grid-row-gap: 1em;
+}
+
+.timeline-time {
+    font-size: 13px;
+    color: rgb(0, 43, 127);
+}
+
+.timeline-title {
+    font-family: Montserrat, Arial, Helvetica, "Noto Sans Devanagari", "Noto Sans CJK SC Thin", "Noto Sans SC", "Noto Sans Hebrew", sans-serif;
+    color: rgb(0, 43, 127)
+}
+
+.timeline-location {
+    white-space: pre-wrap;
+    font-family: "Open Sans", Arial, Helvetica, "Noto Sans Devanagari", "Noto Sans CJK SC Thin", "Noto Sans SC", "Noto Sans Hebrew", sans-serif;
+    font-size: 12px;
+    line-height: 16px;
+}
+
+.timeline-bar {
+    display: table-cell;
+    width: 5%;
+}
+
+.timeline-bar>.dot {
+    height: 7px;
+    width: 7px;
+    background-color: #000;
+    border-radius: 50%;
+    display: inline-block;
+    print-color-adjust: exact;
+}
+
+.timeline-bar>.bar {
+    border-left: 1px solid #b2b4b6;
+    margin-left: 3px;
+    height: 99%;
+}
+
+.institution-name {
+    font-family: Montserrat, Arial, Helvetica, "Noto Sans Devanagari", "Noto Sans CJK SC Thin", "Noto Sans SC", "Noto Sans Hebrew", sans-serif;
+    color: rgb(249, 107, 7);
+}
+
+.certifications-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}

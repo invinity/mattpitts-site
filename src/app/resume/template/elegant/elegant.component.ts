@@ -1,14 +1,12 @@
 import { JsonPipe, NgFor } from '@angular/common';
 import { Component, Input } from '@angular/core';
 import { MatIcon } from '@angular/material/icon';
-import { MatProgressBarModule } from '@angular/material/progress-bar';
-import { MatSnackBarContainer } from '@angular/material/snack-bar';
-import { DescriptionComponent } from "../../widget/description/description.component";
+import { DescriptionComponent } from "./description/description.component";
 
 @Component({
   selector: 'resume-elegant',
   standalone: true,
-  imports: [JsonPipe, NgFor, DescriptionComponent, MatIcon, MatProgressBarModule, MatSnackBarContainer],
+  imports: [JsonPipe, NgFor, DescriptionComponent, MatIcon],
   templateUrl: './elegant.component.html',
   styleUrl: './elegant.component.scss'
 })

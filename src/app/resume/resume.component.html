@@ -3,6 +3,7 @@
         resume. This can take up to one minute while retrieving my profile from LinkedIn, please be patient. Thanks!
     </div>
     <div class="resume" [hidden]="!profileLoaded">
-        <resume-elegant [profile]="profile"></resume-elegant>
+        <!-- <resume-elegant [profile]="profile"></resume-elegant> -->
+        <resume-timeline [profile]="profile"></resume-timeline>
     </div>
 </div>

@@ -1,8 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { BulletedContentPipe } from '../../bulleted-content.pipe';
+import { BulletedContentPipe } from '../../../bulleted-content.pipe';
 
 @Component({
-  selector: 'app-description',
+  selector: 'elegant-description',
   standalone: true,
   imports: [BulletedContentPipe],
   templateUrl: './description.component.html',
