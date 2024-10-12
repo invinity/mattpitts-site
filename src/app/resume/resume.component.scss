@@ -20,4 +20,11 @@
         box-shadow: unset !important;
         margin-top: 0 !important;
     }
+    @page {
+        size: A4 portrait;
+        margin: 1cm;
+    }
+    ::-webkit-scrollbar {
+        display: none;
+    }
 }
