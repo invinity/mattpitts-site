@@ -13,7 +13,7 @@ export const appConfig: ApplicationConfig = {
     provideAnimationsAsync(),
     provideHttpClient(), {
       provide: "linkedInProfileServiceUrl",
-      useValue: "https://linkedin-profile-grabber-76184862476.us-central1.run.app"
+      useValue: "https://linkedin-profile-grabber-76184862476.us-east1.run.app"
     }, {
       provide: LINKEDIN_SERVICE,
       useClass: RealLinkedinService
