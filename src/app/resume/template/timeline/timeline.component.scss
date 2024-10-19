@@ -115,3 +115,17 @@ ul.skills>li {
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
+
+.resume-footer {
+    font-size: 8pt;
+    color: lightgray;
+    font-family: "Open Sans", Arial, Helvetica, "Noto Sans Devanagari", "Noto Sans CJK SC Thin", "Noto Sans SC", "Noto Sans Hebrew", sans-serif;
+}
+
+@media print {
+    .resume-footer {
+        // height: 130px;
+        // margin-top: -130px;
+        page-break-before: always;
+    }
+}

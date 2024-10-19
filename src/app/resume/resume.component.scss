@@ -23,8 +23,15 @@
     @page {
         size: A4 portrait;
         margin: 1cm;
+        margin-bottom: 2cm;
     }
     ::-webkit-scrollbar {
         display: none;
     }
+}
+
+.print-button {
+    position: fixed;
+    top: 100px;
+    right: 100px;
 }
