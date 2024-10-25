@@ -6,27 +6,40 @@
             href="mailto:matt@gopitts.net">matt&#64;gopitts.net</a>
         <mat-icon class="vertically-top" [inline]="true">link</mat-icon><a
             href="https://linkedin.com/in/mattpitts">https://linkedin.com/in/mattpitts</a>
-    </div>
-    <span class="resume-section-name">Summary</span>
-    <p class="profile-summary">{{ profile?.Summary }}</p>
 
-    <span class="resume-section-name">Skills</span>
-    <div class="resume-section-content">
-        <ul class="skills">
-            <li>Java</li>
-            <li>REST</li>
-            <li>Team Lead</li>
-            <li>CI/CD</li>
-            <li>Vulnerability Management</li>
-            <li>Domain Driven Design</li>
-            <li>Microservices</li>
-            <li>Concurrency</li>
-            <li>Reactive Programming</li>
-            <li>AWS</li>
-            <li>GCP</li>
-            <li>Golang</li>
-            <li>Docker</li>
-        </ul>
+        <mat-icon class="vertically-top" [inline]="true">link</mat-icon><a
+            href="https://matt.gopitts.net">https://matt.gopitts.net</a>
+    </div>
+    <div class="split-columns">
+        <div>
+            <span class="resume-section-name">Summary</span>
+            <p class="profile-summary">{{ profile?.Summary }}</p>
+        </div>
+        <div>
+            <span class="resume-section-name">Skills</span>
+            <div class="resume-section-content">
+                <ul class="skills">
+                    <li>Team Lead</li>
+                    <li>Java</li>
+                    <li>Spring</li>
+                    <li>REST</li>
+                    <li>Angular/Typescript</li>
+                    <li>Full-stack development</li>
+                    <li>CI/CD</li>
+                    <li>Software Design</li>
+                    <li>SDLC tools and practices</li>
+                    <li>Domain Driven Design</li>
+                    <li>Microservices</li>
+                    <li>Concurrency</li>
+                    <li>MongoDB</li>
+                    <li>AWS</li>
+                    <li>GCP</li>
+                    <li>Golang</li>
+                    <li>Docker</li>
+                    <li>RDBMS</li>
+                </ul>
+            </div>
+        </div>
     </div>
 
     <span class="resume-section-name">Certifactions</span>
@@ -103,5 +116,5 @@
     </div>
 </div>
 <div class="pull-right resume-footer noprint">
-Version: {{ profile?.GeneratedAt }}
+    Version: {{ profile?.GeneratedAt }}
 </div>
