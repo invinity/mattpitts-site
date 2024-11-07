@@ -48,7 +48,8 @@
                     <mat-card-content class="dashboard-card-content">
                         <h5>What to look at here</h5>
                         <ul>
-                            <li>My <a routerLink="/resume">personal résumé</a> rendered in realtime using data from my LinkedIn profile via a backend Golang API</li>
+                            <li>My <a routerLink="/resume">personal résumé</a> rendered in realtime using data from my
+                                LinkedIn profile via a backend Golang API</li>
                         </ul>
                         <h5>Links to the projects behind this site in Github</h5>
                         <ul>
@@ -61,7 +62,8 @@
                         </ul>
                         <h5>Tools used to author, build and host this site</h5>
                         <ul>
-                            <li><a href="https://code.visualstudio.com/">Visual Studio Code used as Integrated Development Environment (IDE)</a></li>
+                            <li><a href="https://code.visualstudio.com/">Visual Studio Code used as Integrated
+                                    Development Environment (IDE)</a></li>
                             <li><a href="https://angular.dev" target="_blank">Angular for UI framework</a></li>
                             <li><a href="https://jasmine.github.io/" target="_blank">Jasmine for Typescript testing</a>
                             </li>
@@ -102,7 +104,8 @@
                                 project</a>, written in Golang, that
                             provides a simple
                             API to retrieve my Linkedin profile as JSON.
-                            This it allows myself, or anyone else, to view a <a routerLink="/resume">formatted résumé</a> that is always up-to-date
+                            This it allows myself, or anyone else, to view a <a routerLink="/resume">formatted
+                                résumé</a> that is always up-to-date
                             with my LinkedIn
                             profile.
                         </p>
@@ -123,7 +126,8 @@
                     </mat-card-header>
                     <mat-card-content class="dashboard-card-content">
                         <p>
-                            The <a href="https://github.com/invinity/mattpitts-site" target="_blank">Angular project</a> backing this site has fully-automated CI/CD using <a
+                            The <a href="https://github.com/invinity/mattpitts-site" target="_blank">Angular project</a>
+                            backing this site has fully-automated CI/CD using <a
                                 href="https://docs.github.com/en/actions" target="_blank">GitHub Actions</a>. The steps
                             are defined in a
                             <i>workflows</i> file contained
@@ -148,6 +152,18 @@
                             image into <a href="https://cloud.google.com/run?hl=en" target="_blank">Google Cloud Run</a>
                             for hosting.
                         </p>
+
+                        <p>
+                            As a developer, these CI/CD automations make the
+                            development process so much smoother than if the process to deliver the code to production
+                            was manual.
+                            For my small project, this isn't specatular, but on a large project with many
+                            team members, this is a crucial process to establishing agility in the software delivery
+                            process. Teams get continuous feedback on their own changes as well as others', test
+                            failures can be readily identified
+                            and corrected, and the team is able to stay focused on code instead of the act of getting it
+                            into its execution environment.
+                        </p>
                     </mat-card-content>
                 </mat-card>
 
@@ -159,7 +175,8 @@
                     </mat-card-header>
                     <mat-card-content class="dashboard-card-content">
                         <p>
-                            The <a href="https://github.com/invinity/mattpitts-site" target="_blank">Angular application</a> for this site is hosted as a static website within an <span
+                            The <a href="https://github.com/invinity/mattpitts-site" target="_blank">Angular
+                                application</a> for this site is hosted as a static website within an <span
                                 class="skill">AWS (Amazon
                                 Web Services) S3</span>
                             bucket. The bucket holds the site's constructed Angular output files, while an <span
@@ -168,8 +185,8 @@
                             providing <span class="skill">Transport Layer Security (TLS)</span> for the site.
                         </p>
 
-                        <p>For the <a href="https://github.com/invinity/linkedin-profile-grabber"
-                            target="_blank">Golang project</a> providing the Linkedin profile data for
+                        <p>For the <a href="https://github.com/invinity/linkedin-profile-grabber" target="_blank">Golang
+                                project</a> providing the Linkedin profile data for
                             myself, it is deployed
                             as a Docker
                             container into <a href="https://cloud.google.com/run?hl=en" target="_blank">Google Cloud
@@ -194,15 +211,20 @@
                         <a mat-raised-button matBadge="8" matBadgePosition="before" routerLink="/resume">My Résumé</a>
 
                         <a mat-raised-button matBadge="8" matBadgePosition="before"
-                            href="https://github.com/invinity/mattpitts-site" target="_blank">Angular site frontend project</a>
+                            href="https://github.com/invinity/mattpitts-site" target="_blank">Angular site frontend
+                            project</a>
 
                         <a mat-raised-button matBadge="8" matBadgePosition="before"
-                            href="https://github.com/invinity/linkedin-profile-grabber" target="_blank">Golang backend API project</a>
+                            href="https://github.com/invinity/linkedin-profile-grabber" target="_blank">Golang backend
+                            API project</a>
                     </mat-card-content>
                 </mat-card>
 
-                <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="light" data-type="VERTICAL" data-vanity="mattpitts" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://www.linkedin.com/in/mattpitts?trk=profile-badge"> </a></div>
-              
+                <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="light"
+                    data-type="VERTICAL" data-vanity="mattpitts" data-version="v1"><a
+                        class="badge-base__link LI-simple-link"
+                        href="https://www.linkedin.com/in/mattpitts?trk=profile-badge"> </a></div>
+
             </div>
         </div>
     </div>
