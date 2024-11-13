@@ -39,7 +39,9 @@ export class TimelineComponent {
     "AWS",
     "TCP/IP Socket Communications",
     "Golang",
-    "Docker"
+    "Docker",
+    "Angular",
+    "Github"
   ]
 
   removedSkills = new Array<string>()
