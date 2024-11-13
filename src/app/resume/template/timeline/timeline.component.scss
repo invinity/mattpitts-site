@@ -67,11 +67,14 @@ ul.skills>li {
     display: inline-block;
     margin: .25em .75em .25em 0px;
     padding: 0 .25em;
-    border-bottom: 1px solid rgba(101, 105, 109, 0.5);
     text-align: justify;
     -moz-text-align-last: justify;
     -webkit-text-align-last: justify; /* not implemented yet, and will not be */
     text-align-last: justify; /* IE */
+}
+
+ul.skills>li>span {
+    border-bottom: 1px solid rgba(101, 105, 109, 0.5);
 }
 
 .timeline {
@@ -139,4 +142,9 @@ ul.skills>li {
         // margin-top: -130px;
         page-break-before: always;
     }
+}
+
+.action-icon {
+    cursor: pointer;
+    transform: scale(1.2);
 }

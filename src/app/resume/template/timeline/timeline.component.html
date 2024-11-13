@@ -11,32 +11,19 @@
             href="https://matt.gopitts.net">https://matt.gopitts.net</a>
     </div>
     <!-- <div class="split-columns"> -->
-        <div>
-            <span class="resume-section-name">Summary</span>
-            <p class="profile-summary">{{ profile?.Summary }}</p>
+    <div>
+        <span class="resume-section-name">Summary</span>
+        <p class="profile-summary">{{ profile?.Summary }}</p>
+    </div>
+    <div>
+        <span class="resume-section-name">Skills</span>
+        <div class="resume-section-content">
+            <ul class="skills">
+                <li *ngFor="let skill of skills"><span>{{ skill }}</span><mat-icon class="vertically-top action-icon noprint" [inline]="true" (click)="removeSkill(skill)"
+                    aria-label="Remove this skill">close</mat-icon></li>
+            </ul>
         </div>
-        <div>
-            <span class="resume-section-name">Skills</span>
-            <div class="resume-section-content">
-                <ul class="skills">
-                    <li>Java</li>
-                    <li>SOA & REST</li>
-                    <li>Full-stack development</li>
-                    <li>RDBMS</li>
-                    <li>Kafka</li>
-                    <li>Reactive Programming</li>
-                    <li>CI/CD</li>
-                    <li>Software Design & Testing</li>
-                    <li>SDLC tools and practices</li>
-                    <li>Team lead & Technical coach</li>
-                    <li>Microservices</li>
-                    <li>AWS</li>
-                    <li>GCP</li>
-                    <li>Golang</li>
-                    <li>Docker</li>
-                </ul>
-            </div>
-        </div>
+    </div>
     <!-- </div> -->
 
     <span class="resume-section-name">Certifactions</span>
@@ -52,25 +39,25 @@
 
     <span class="resume-section-name">Experience</span>
     <div class="timeline resume-section-content">
-        <ng-container *ngFor="let experience of profile?.Experience">
-            <ng-container *ngFor="let position of experience.Positions">
-                <div class="timeline-info">
-                    <div class="timeline-time">
-                        {{ position.StartDate }} - {{ position.EndDate || "Present" }}
-                    </div>
-                    <span class="timeline-location" [hidden]="!position.Location">{{ position.Location }}</span>
-                </div>
-                <div class="timeline-bar">
-                    <div class="dot"></div>
-                    <div class="bar"></div>
-                </div>
-                <div class="timeline-detail">
-                    <div class="timeline-title">{{ position.Title }}</div>
-                    <div class="institution-name">{{ experience.Company }}</div>
-                    <timeline-description [text]="position.Description"></timeline-description>
-                </div>
-            </ng-container>
-        </ng-container>
+        @for (experience of profile?.Experience; track experience) {
+        @for (position of experience.Positions; track position) {
+        <div class="timeline-info">
+            <div class="timeline-time">
+                {{ position.StartDate }} - {{ position.EndDate || "Present" }}
+            </div>
+            <span class="timeline-location" [hidden]="!position.Location">{{ position.Location }}</span>
+        </div>
+        <div class="timeline-bar">
+            <div class="dot"></div>
+            <div class="bar"></div>
+        </div>
+        <div class="timeline-detail">
+            <div class="timeline-title">{{ position.Title }}</div>
+            <div class="institution-name">{{ experience.Company }}</div>
+            <timeline-description [text]="position.Description"></timeline-description>
+        </div>
+        }
+        }
     </div>
 
     <span class="resume-section-name">Education</span>
@@ -94,8 +81,9 @@
     </div>
 
     <span class="resume-section-name">Projects</span>
-    <div class="timeline resume-section-content">
-        <ng-container *ngFor="let i of profile?.Projects">
+    <div class="resume-section-content" cdkDropList>
+        @for (i of profile?.Projects; track i) {
+        <div class="timeline" cdkDrag>
             <div class="timeline-info">
                 <div class="timeline-time">
                     {{ i.StartDate }} - {{ i.EndDate || "Present" }}
@@ -106,10 +94,17 @@
                 <div class="bar"></div>
             </div>
             <div class="timeline-detail">
+                <div class="pull-right noprint">
+                    <mat-icon cdkDragHandle class="vertically-top action-icon" [inline]="true" aria-label="Reorder this project"
+                        >drag_handle</mat-icon>
+                    <mat-icon class="vertically-top action-icon" [inline]="true" (click)="removeProject(i)"
+                        aria-label="Remove this project">close</mat-icon>
+                </div>
                 <div class="timeline-title">{{ i.Title }}</div>
                 <timeline-description [text]="i.Description"></timeline-description>
             </div>
-        </ng-container>
+        </div>
+        }
     </div>
 </div>
 <div class="pull-right resume-footer noprint">

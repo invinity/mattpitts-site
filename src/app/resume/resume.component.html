@@ -6,7 +6,19 @@
         <!-- <resume-elegant [profile]="profile"></resume-elegant> -->
         <resume-timeline [profile]="profile"></resume-timeline>
     </div>
-    <div class="print-button noprint"><a mat-raised-button matBadge="8" matBadgePosition="before" (click)="print()">
-            Print
-        </a></div>
+    <mat-card class="noprint resume-controls">
+        <mat-card-header><mat-card-title>Resume Controls</mat-card-title></mat-card-header>
+        <mat-card-content>
+            <!-- <mat-form-field>
+                <mat-select placeholder="Specialization" [value]="selectedSpecialization">
+                    <mat-option value="reactive">Reactive/Streaming</mat-option>
+                    <mat-option value="hardware-software">Hardware & Software</mat-option>
+                    <mat-option value="fullstack">Full-stack Development</mat-option>
+                </mat-select>
+                <mat-hint align="end">Here's the dropdown arrow ^</mat-hint>
+            </mat-form-field> -->
+            <a mat-raised-button matBadge="8" matBadgePosition="before" (click)="print()">
+                Print</a>
+        </mat-card-content>
+    </mat-card>
 </div>
