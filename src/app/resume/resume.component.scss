@@ -7,7 +7,7 @@
 
 .resume {
     margin: 1em 0;
-    max-width: 940px;
+    max-width: 780px;
     position: relative;
     width: 100%;
     background-color: white;
@@ -22,7 +22,7 @@
     }
     @page {
         size: letter portrait;
-        margin: 1cm;
+        margin: .5cm;
         margin-bottom: 2cm;
     }
     ::-webkit-scrollbar {

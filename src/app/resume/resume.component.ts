@@ -9,11 +9,12 @@ import { MatCardModule } from '@angular/material/card';
 import {MatSelectModule} from '@angular/material/select';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
+import { JsonPipe } from '@angular/common';
 
 @Component({
   selector: 'app-resume',
   standalone: true,
-  imports: [ElegantComponent, MatProgressBarModule, TimelineComponent, MatButtonModule, MatCardModule, MatInputModule, MatFormFieldModule, MatSelectModule],
+  imports: [ElegantComponent, MatProgressBarModule, TimelineComponent, MatButtonModule, MatCardModule, MatInputModule, MatFormFieldModule, MatSelectModule, JsonPipe  ],
   templateUrl: './resume.component.html',
   styleUrl: './resume.component.scss'
 })

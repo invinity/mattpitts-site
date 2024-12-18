@@ -27,12 +27,18 @@
     font-weight: 700;
     font-family: Montserrat, Arial, Helvetica, "Noto Sans Devanagari", "Noto Sans CJK SC Thin", "Noto Sans SC", "Noto Sans Hebrew", sans-serif;
     color: rgb(249, 107, 7);
-    font-size: 17px;
+    font-size: 14px;
     line-height: 21px;
+}
+
+.profile-summary {
+    font-size: 11pt;
+    line-height: 1.2em;
 }
 
 .resume-info-bar {
     padding: .5em;
+    font-size: 10pt;
 }
 
 .resume-info-bar mat-icon {
@@ -71,6 +77,7 @@ ul.skills>li {
     -moz-text-align-last: justify;
     -webkit-text-align-last: justify; /* not implemented yet, and will not be */
     text-align-last: justify; /* IE */
+    font-size: 11pt;
 }
 
 ul.skills>li>span {
@@ -125,11 +132,6 @@ ul.skills>li>span {
     color: rgb(249, 107, 7);
 }
 
-.certifications-list {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-
 .resume-footer {
     font-size: 8pt;
     color: lightgray;
@@ -144,7 +146,25 @@ ul.skills>li>span {
     }
 }
 
+.pagebreak {
+    page-break-after: always;
+}
+
 .action-icon {
     cursor: pointer;
     transform: scale(1.2);
+}
+
+.hidden {
+    text-decoration: line-through;
+}
+
+@media print {
+    .hidden {
+        display: none;
+    }
+}
+
+.noshow {
+    display: none;
 }
