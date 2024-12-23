@@ -5,6 +5,13 @@ Github Actions. You can see the results of this project's hosted output at [my s
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.1.3.
 
+## Noteworthy Items
+
+The following are some of the noteworthy things that I have included in this project from CI/CD perspective.
+
+- Use of the Github Actions [cache plugin](https://github.com/actions/cache) to have separated build jobs with some shared artifacts
+- Code coverage reports generated and used to analyze code coverage on pull-request builds
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.

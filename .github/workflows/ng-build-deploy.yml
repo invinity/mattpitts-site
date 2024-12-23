@@ -23,7 +23,7 @@ jobs:
     - name: Build
       run: npm run build:prod
 
-    - name: cache built site
+    - name: Cache Site Build
       uses: actions/cache/save@v4
       with:
         path: ./dist/mattpitts-site/browser
@@ -70,7 +70,7 @@ jobs:
         aws-secret-access-key: ${{ secrets.AWS_S3_MATTPITTS_SITE_ACCESS_KEY_SECRET }}
         aws-region: us-east-2
     
-    - name: restore built site from cache
+    - name: Restore Site Build from Cache
       uses: actions/cache/restore@v4
       with:
         path: ./dist/mattpitts-site/browser
