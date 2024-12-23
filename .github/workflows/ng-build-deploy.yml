@@ -1,21 +1,15 @@
-name: Angular Build and Deploy
-
+name: Angular Build Test and Deploy
+permissions:
+  contents: read
 on:
   push:
     branches:
-    - main
+    - '**'
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
     steps:
-    - name: Configure AWS Credentials
-      uses: aws-actions/configure-aws-credentials@v4
-      with:
-        aws-access-key-id: ${{ secrets.AWS_S3_MATTPITTS_SITE_ACCESS_KEY }}
-        aws-secret-access-key: ${{ secrets.AWS_S3_MATTPITTS_SITE_ACCESS_KEY_SECRET }}
-        aws-region: us-east-2
-
     - name: Checkout
       uses: actions/checkout@v4
 
@@ -27,11 +21,61 @@ jobs:
     - name: Install dependencies
       run: npm install
 
-    - name: Run tests
-      run: npm run test:headless
-
     - name: Build
       run: npm run build:prod
+
+    - name: Cache Site Build
+      uses: actions/cache/save@v4
+      with:
+        path: ./dist/mattpitts-site/browser
+        key: 'built-ng-site'
+
+  test:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run tests with coverage
+        run: npm run test:headless
+
+      #  Compares two code coverage files and generates report as a comment
+      - name: Generate Code Coverage report
+        id: code-coverage
+        uses: barecheck/code-coverage-action@v1
+        with:
+          barecheck-github-app-token: ${{ secrets.BARECHECK_GITHUB_APP_TOKEN }}
+          lcov-file: "./coverage/mattpitts-site/lcov.info"
+          base-lcov-file: "./base-lcov.info"
+          minimum-ratio: 0 # Fails Github action once code coverage is decreasing
+          send-summary-comment: true
+          show-annotations: "warning" # Possible options warning|error
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: test
+    steps:
+    - name: Configure AWS Credentials
+      uses: aws-actions/configure-aws-credentials@v4
+      with:
+        aws-access-key-id: ${{ secrets.AWS_S3_MATTPITTS_SITE_ACCESS_KEY }}
+        aws-secret-access-key: ${{ secrets.AWS_S3_MATTPITTS_SITE_ACCESS_KEY_SECRET }}
+        aws-region: us-east-2
+    
+    - name: Restore Site Build from Cache
+      uses: actions/cache/restore@v4
+      with:
+        path: ./dist/mattpitts-site/browser
+        key: 'built-ng-site'
 
     - name: Deploy
       if: success()

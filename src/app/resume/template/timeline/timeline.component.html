@@ -19,11 +19,11 @@
         <div>
             <span class="resume-section-name">Relevant Skills</span>
             <div class="resume-section-content">
-                <ul class="skills" cdkDropList>
+                <ul class="skills" cdkDropList (cdkDropListDropped)="moveSkill($event)">
                     @for (skill of skills; track skill) {
-                    <li><span>{{ skill }}</span>
-                        <!-- <mat-icon cdkDragHandle class="vertically-top action-icon" [inline]="true"
-                        aria-label="Reorder this project">drag_handle</mat-icon> -->
+                    <li cdkDrag><span>{{ skill }}</span>
+                        <mat-icon cdkDragHandle class="vertically-top action-icon noprint" [inline]="true"
+                            aria-label="Reorder this skill">drag_handle</mat-icon>
                         <mat-icon class="vertically-top action-icon noprint" [inline]="true"
                             (click)="removeSkill(skill)" aria-label="Remove this skill">close</mat-icon>
                     </li>
@@ -102,7 +102,7 @@
     <span class="resume-section-name">All Projects</span>
     <div class="resume-section-content">
         @for (i of profile?.Projects; track i) {
-        <div class="timeline" cdkDrag>
+        <div class="timeline">
             <div class="timeline-info" [ngClass]="{'hidden': i.hide}">
                 <div class="timeline-time">
                     {{ i.StartDate }} - {{ i.EndDate || "Present" }}
@@ -114,8 +114,6 @@
             </div>
             <div class="timeline-detail" [ngClass]="{'hidden': i.hide}">
                 <div class="pull-right noprint">
-                    <mat-icon cdkDragHandle class="vertically-top action-icon" [inline]="true"
-                        aria-label="Reorder this project">drag_handle</mat-icon>
                     <mat-icon class="vertically-top action-icon" [inline]="true" (click)="hideProject(i)"
                         aria-label="Hide this project" [ngClass]="{'noshow': i.hide}">cancel</mat-icon>
                     <mat-icon class="vertically-top action-icon" [inline]="true" (click)="unhideProject(i)"
