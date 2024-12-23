@@ -34,7 +34,7 @@ jobs:
         run: npm install
 
       - name: Run tests with coverage
-        run: ng test --code-coverage
+        run: npm run test:coverage
 
       #  Compares two code coverage files and generates report as a comment
       - name: Generate Code Coverage report
