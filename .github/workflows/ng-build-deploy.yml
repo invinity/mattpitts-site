@@ -1,5 +1,6 @@
-name: Angular Build and Deploy
-
+name: Angular Build Test and Deploy
+permissions:
+  contents: read
 on:
   push:
     branches:
