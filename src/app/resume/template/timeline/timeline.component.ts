@@ -49,7 +49,6 @@ export class TimelineComponent {
     "Reactive Programming",
     "Microservices",
     "AWS",
-    "TCP/IP Socket Communications",
     "Golang",
     "Docker",
     "Logging",
