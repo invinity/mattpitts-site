@@ -14,7 +14,7 @@ import {
 @Component({
   selector: 'resume-timeline',
   standalone: true,
-  imports: [MatIcon, DescriptionComponent, NgFor, CdkDropListGroup, CdkDropList, CdkDrag, NgClass],
+  imports: [MatIcon, DescriptionComponent, NgFor, CdkDropList, CdkDrag, NgClass],
   templateUrl: './timeline.component.html',
   styleUrl: './timeline.component.scss'
 })
@@ -27,20 +27,23 @@ export class TimelineComponent {
   removedProjects = new Array<any>()
 
   skills = [
-    "Team lead & technical coach",
-    "Customer facing experience",
     "Java",
     "Scala",
     "CI/CD",
     "Software Design & Testing",
+    "Spring",
     "SDLC tools and practices",
     "Github",
+    "GCP",
     "Jenkins",
+    "Team lead/coach",
     "Capacity Planning",
     "Harness",
     "Full-stack development",
     "SOA & REST",
     "RDBMS & SQL",
+    "Python",
+    "Crypto libraries/algorithms",
     "Angular",
     "Kafka",
     "Reactive Programming",
@@ -51,8 +54,7 @@ export class TimelineComponent {
     "Docker",
     "Logging",
     "MongoDB",
-    "Powershell",
-    "Bash"
+    "Automation/Scripting"
   ]
 
   removedSkills = new Array<string>()
@@ -60,6 +62,10 @@ export class TimelineComponent {
   removeSkill(skill: string) {
     const idx = this.skills.indexOf(skill)
     transferArrayItem(this.skills, this.removedSkills, idx, idx)
+  }
+
+  moveSkill(event: CdkDragDrop<string[]>) {
+    moveItemInArray(this.skills, event.previousIndex, event.currentIndex);
   }
 
   removeProject(project: any) {
