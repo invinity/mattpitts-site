@@ -11,6 +11,7 @@ The following are some of the noteworthy things that I have included in this pro
 
 - Use of the Github Actions [cache plugin](https://github.com/actions/cache) to have separated build jobs with some shared artifacts
 - Code coverage reports generated and used to analyze code coverage on pull-request builds
+- [CodeQL](https://codeql.github.com/) setup within GitHub to perform code quality analysis on commit
 
 ## Development server
 
