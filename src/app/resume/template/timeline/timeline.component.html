@@ -17,7 +17,7 @@
             <p class="profile-summary">{{ profile?.Summary }}</p>
         </div>
         <div>
-            <span class="resume-section-name">Relevant Skills</span>
+            <span class="resume-section-name">Hightlighted Skills</span>
             <div class="resume-section-content">
                 <ul class="skills" cdkDropList (cdkDropListDropped)="moveSkill($event)">
                     @for (skill of skills; track skill) {
