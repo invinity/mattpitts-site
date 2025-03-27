@@ -44,7 +44,7 @@
     </div>
 
     <!-- highlighted projects -->
-    <div [ngClass]="{'noshow': highlightedProjects.length == 0}">
+    <div [ngClass]="{'noshow': highlightedProjects.length == 0}" class="pagebreak">
         <span class="resume-section-name">Highlighted Projects</span>
         <div class="resume-section-content" cdkDropList>
             @for (i of highlightedProjects; track i) {
@@ -75,9 +75,6 @@
         </div>
     </div>
 
-    <br />
-    <br />
-
     <!-- experience -->
     <span class="resume-section-name">Experience</span>
     <div class="timeline resume-section-content">
@@ -103,7 +100,7 @@
     </div>
 
     <!-- all projects -->
-    <div [ngClass]="{'noprint': highlightedProjects.length > 0}">
+    <div class="noprint">
         <span class="resume-section-name">Projects</span>
         <div class="resume-section-content">
             @for (i of profile?.Projects; track i) {
@@ -120,11 +117,11 @@
                 <div class="timeline-detail" [ngClass]="{'hidden': i.hide}">
                     <div class="pull-right noprint">
                         <mat-icon class="vertically-top action-icon" [inline]="true" (click)="hideProject(i)"
-                            aria-label="Hide this project" [ngClass]="{'noshow': i.hide}">cancel</mat-icon>
+                            aria-label="Hide this project" matTooltip="Hide this project" [ngClass]="{'noshow': i.hide}">cancel</mat-icon>
                         <mat-icon class="vertically-top action-icon" [inline]="true" (click)="unhideProject(i)"
-                            aria-label="Hide this project" [ngClass]="{'noshow': !i.hide}">check_circle</mat-icon>
+                            aria-label="Un-Hide this project" matTooltip="Un-Hide this project" [ngClass]="{'noshow': !i.hide}">check_circle</mat-icon>
                         <mat-icon class="vertically-top action-icon" [inline]="true" (click)="highlightProject(i)"
-                            aria-label="Highlight this project">arrow_upward</mat-icon>
+                            aria-label="Highlight this project" matTooltip="Highlight this project">arrow_upward</mat-icon>
                     </div>
                     <div class="timeline-title">{{ i.Title }}</div>
                     <timeline-description [text]="i.Description"></timeline-description>
