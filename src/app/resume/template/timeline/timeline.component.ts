@@ -32,11 +32,15 @@ export class TimelineComponent {
     "CI/CD",
     "Software Design & Testing",
     "Spring",
+    "DNS/HTTP/SSL/TLS",
+    "Apigee",
     "SDLC tools and practices",
     "Github",
+    "Code Security/SAST/SCA",
     "GCP",
     "Jenkins",
     "Team lead/coach",
+    "SSH/SFTP/SCP",
     "Capacity Planning",
     "Harness",
     "Full-stack development",
@@ -45,18 +49,23 @@ export class TimelineComponent {
     "Python",
     "Crypto libraries/algorithms",
     "Angular",
+    "TCP/IP",
+    "IAM/OAuth/OIDC",
+    "Checkmarx",
+    "Black Duck",
     "Kafka",
     "Reactive Programming",
+    "DevOps",
     "Microservices",
     "AWS",
     "Golang",
     "Docker",
-    "Logging",
+    "Logging/Monitoring",
     "MongoDB",
     "Automation/Scripting"
   ]
 
-  removedSkills = new Array<string>()
+  removedSkills = new Array<string>() 
 
   removeSkill(skill: string) {
     const idx = this.skills.indexOf(skill)

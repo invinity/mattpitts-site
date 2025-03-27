@@ -1,6 +1,5 @@
 <div class="resume-root">
     <div class="profile-name">{{ profile?.Name }}</div>
-    <div class="profile-headline">{{ profile?.Headline }}</div>
     <div class="resume-info-bar">
         <mat-icon class="vertically-top" [inline]="true">email</mat-icon><a
             href="mailto:matt@gopitts.net">matt&#64;gopitts.net</a>
@@ -33,7 +32,7 @@
         </div>
     </div>
 
-    <span class="resume-section-name">Certifactions</span>
+    <span class="resume-section-name">Certifications</span>
     <div class="split-columns resume-section-content">
         <ng-container *ngFor="let i of profile?.Certifications">
             <div>
@@ -44,8 +43,9 @@
         </ng-container>
     </div>
 
+    <!-- highlighted projects -->
     <div [ngClass]="{'noshow': highlightedProjects.length == 0}">
-        <span class="resume-section-name">Highlighted Project Experience</span>
+        <span class="resume-section-name">Highlighted Projects</span>
         <div class="resume-section-content" cdkDropList>
             @for (i of highlightedProjects; track i) {
             <div class="timeline" cdkDrag>
@@ -73,10 +73,13 @@
             </div>
             }
         </div>
-        <div class="pagebreak"></div>
     </div>
 
-    <span class="resume-section-name">All Experience</span>
+    <br />
+    <br />
+
+    <!-- experience -->
+    <span class="resume-section-name">Experience</span>
     <div class="timeline resume-section-content">
         @for (experience of profile?.Experience; track experience) {
         @for (position of experience.Positions; track position) {
@@ -90,7 +93,7 @@
             <div class="dot"></div>
             <div class="bar"></div>
         </div>
-        <div class="timeline-detail">
+        <div class="timeline-detail nopagebreak">
             <div class="timeline-title">{{ position.Title }}</div>
             <div class="institution-name">{{ experience.Company }}</div>
             <timeline-description [text]="position.Description"></timeline-description>
@@ -99,35 +102,39 @@
         }
     </div>
 
-    <span class="resume-section-name">All Projects</span>
-    <div class="resume-section-content">
-        @for (i of profile?.Projects; track i) {
-        <div class="timeline">
-            <div class="timeline-info" [ngClass]="{'hidden': i.hide}">
-                <div class="timeline-time">
-                    {{ i.StartDate }} - {{ i.EndDate || "Present" }}
+    <!-- all projects -->
+    <div [ngClass]="{'noprint': highlightedProjects.length > 0}">
+        <span class="resume-section-name">Projects</span>
+        <div class="resume-section-content">
+            @for (i of profile?.Projects; track i) {
+            <div class="timeline">
+                <div class="timeline-info" [ngClass]="{'hidden': i.hide}">
+                    <div class="timeline-time">
+                        {{ i.StartDate }} - {{ i.EndDate || "Present" }}
+                    </div>
+                </div>
+                <div class="timeline-bar" [ngClass]="{'hidden': i.hide}">
+                    <div class="dot"></div>
+                    <div class="bar"></div>
+                </div>
+                <div class="timeline-detail" [ngClass]="{'hidden': i.hide}">
+                    <div class="pull-right noprint">
+                        <mat-icon class="vertically-top action-icon" [inline]="true" (click)="hideProject(i)"
+                            aria-label="Hide this project" [ngClass]="{'noshow': i.hide}">cancel</mat-icon>
+                        <mat-icon class="vertically-top action-icon" [inline]="true" (click)="unhideProject(i)"
+                            aria-label="Hide this project" [ngClass]="{'noshow': !i.hide}">check_circle</mat-icon>
+                        <mat-icon class="vertically-top action-icon" [inline]="true" (click)="highlightProject(i)"
+                            aria-label="Highlight this project">arrow_upward</mat-icon>
+                    </div>
+                    <div class="timeline-title">{{ i.Title }}</div>
+                    <timeline-description [text]="i.Description"></timeline-description>
                 </div>
             </div>
-            <div class="timeline-bar" [ngClass]="{'hidden': i.hide}">
-                <div class="dot"></div>
-                <div class="bar"></div>
-            </div>
-            <div class="timeline-detail" [ngClass]="{'hidden': i.hide}">
-                <div class="pull-right noprint">
-                    <mat-icon class="vertically-top action-icon" [inline]="true" (click)="hideProject(i)"
-                        aria-label="Hide this project" [ngClass]="{'noshow': i.hide}">cancel</mat-icon>
-                    <mat-icon class="vertically-top action-icon" [inline]="true" (click)="unhideProject(i)"
-                        aria-label="Hide this project" [ngClass]="{'noshow': !i.hide}">check_circle</mat-icon>
-                    <mat-icon class="vertically-top action-icon" [inline]="true" (click)="highlightProject(i)"
-                        aria-label="Highlight this project">arrow_upward</mat-icon>
-                </div>
-                <div class="timeline-title">{{ i.Title }}</div>
-                <timeline-description [text]="i.Description"></timeline-description>
-            </div>
+            }
         </div>
-        }
     </div>
 
+    <!-- education -->
     <span class="resume-section-name">Education</span>
     <div class="timeline resume-section-content">
         <ng-container *ngFor="let i of profile?.Education">
