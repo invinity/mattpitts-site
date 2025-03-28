@@ -10,6 +10,7 @@ import {
   moveItemInArray,
   transferArrayItem
 } from '@angular/cdk/drag-drop';
+import { LinkedinProfile, LinkedinProject } from '../../../service/linkedin.service';
 
 @Component({
   selector: 'resume-timeline',
@@ -20,11 +21,11 @@ import {
 })
 export class TimelineComponent {
   @Input()
-  profile: any | undefined
+  profile: LinkedinProfile | undefined
 
-  highlightedProjects = new Array<any>()
+  highlightedProjects = new Array<LinkedinProject>()
 
-  removedProjects = new Array<any>()
+  removedProjects = new Array<LinkedinProject>()
 
   skills = [
     "Java",
@@ -77,31 +78,39 @@ export class TimelineComponent {
   }
 
   removeProject(project: any) {
-    const idx = this.profile?.Projects.indexOf(project)
-    transferArrayItem(this.profile?.Projects, this.removedProjects, idx, idx)
+    if (this.profile) {
+      const idx = this.profile.Projects.indexOf(project)
+      transferArrayItem(this.profile.Projects as LinkedinProject[], this.removedProjects, idx, idx)
+    }
   }
 
   hideProject(project: any) {
-    const idx = this.profile?.Projects.indexOf(project)
-    if (idx >= 0) {
-      this.profile.Projects[idx].hide = true;
+    if (this.profile) {
+      const idx = this.profile.Projects.indexOf(project)
+      if (idx >= 0) {
+        this.profile.Projects[idx].hide = true;
+      }
     }
   }
 
   unhideProject(project: any) {
-    const idx = this.profile?.Projects.indexOf(project)
-    if (idx >= 0) {
-      this.profile.Projects[idx].hide = false;
+    if (this.profile) {
+      const idx = this.profile.Projects.indexOf(project)
+      if (idx && idx >= 0) {
+        this.profile.Projects[idx].hide = false;
+      }
     }
   }
 
   highlightProject(project: any) {
     const idx = this.profile?.Projects.indexOf(project)
-    transferArrayItem(this.profile?.Projects, this.highlightedProjects, idx, idx)
+    if (idx) {
+      transferArrayItem(this.profile?.Projects as LinkedinProject[], this.highlightedProjects, idx, idx)
+    }
   }
 
   unHighlightProject(project: any) {
     const idx = this.highlightedProjects.indexOf(project)
-    transferArrayItem(this.highlightedProjects, this.profile?.Projects, idx, idx)
+    transferArrayItem(this.highlightedProjects, this.profile?.Projects as LinkedinProject[], idx, idx)
   }
 }

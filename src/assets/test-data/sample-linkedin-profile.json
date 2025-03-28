@@ -1,0 +1,185 @@
+{
+    "GeneratedAt": "2025-03-27T17:58:02.426009472Z",
+    "Name": "Matthew Pitts",
+    "Headline": "Lead Software Engineer driving impactful software and automation solutions through mentoring, leadership, collaboration and technical excellence across an entire cross-functional team.",
+    "Summary": "A career software expert, passionate about technical excellence, the people that make it happen and always ready for the next challenge! I have designed, built, deployed and owned 50+ individual software apps, components and solutions - working with many languages and tools along the way. Well-versed in all aspects of software, from initial inception to production hosting, scaling and support; as well as the team and people behind it all.",
+    "Experience": [
+        {
+            "Company": "\n          Wells Fargo\n        ",
+            "CompanyImage": "https://media.licdn.com/dms/image/v2/C4D0BAQGLxWPpGqaVmw/company-logo_100_100/company-logo_100_100/0/1630471638964/wellsfargo_logo?e=2147483647\u0026v=beta\u0026t=D1e-PmlhlUZN0ekIYF0M9XadtGDukrr58ywiHYGlJ_Y",
+            "Positions": [
+                {
+                    "Title": "Lead Software Engineer",
+                    "StartDate": "Jan 2022",
+                    "EndDate": "",
+                    "Location": "Winston-Salem, North Carolina, United States",
+                    "Description": "\n          Software Engineering Lead within the Secure Network Services group providing software and automation solutions across the entire network infrastructure team in the bank.* Led initiative to deliver a data pipeline solution to handle billions of events a day for business decisioning* Led the rollout of new microservices to separate application functionality into reusable components* Led our team through the adoption of Enterprise Software Security tools and compliance * First in our team to deploy code to private cloud (Tanzu) using new enterprise CI/CD pipelines* Guide the design and planning of broad initiatives for our team* Built design prototypes exemplifying patterns to guide the rest of the team on best-practices for: clean architecture, working CI/CD models with automated deployment in the enterprise, self-documenting API microservices* Lead our overall team through the complexities of technical solutioning within a large organization* Designed and built many software and automation solutions for Network Security devices\n            \n\n    \n    \n\n    \n        \n\n          \n    \n  \n        "
+                },
+                {
+                    "Title": "Senior Software Engineer",
+                    "StartDate": "May 2014",
+                    "EndDate": "Jan 2022",
+                    "Location": "Winston-Salem, North Carolina, United States",
+                    "Description": "\n          Senior Software Engineer within the Network Security providing software and automation solutions across the entire network security infrastructure team in the bank.* Led our team through the adoption of Enterprise Pipeline tools for software development and delivery: Github, Jenkins, Artifactory, uDeploy, Sonar, Blackduck* Devised an entire semi-automated and repeatable migration of application's entire codebase from Subversion to Git without any development downtime* Personally impactful in our team's adoption of Agile practices as part of a holistic enterprise initiative* Design, build, deploy and maintain a holistic automation solution for 1000s of Firewall and Network security devices using Java, Scala, Angular, MySQL * Work daily to lead our overall team through the complexities of technical solutioning within a large organization\n            \n\n    \n    \n\n    \n        \n\n          \n    \n  \n        "
+                },
+                {
+                    "Title": "Software Engineer",
+                    "StartDate": "Aug 2010",
+                    "EndDate": "May 2014",
+                    "Location": "Winston-Salem, North Carolina, United States",
+                    "Description": "\n          Software Engineer within the Network Security group providing software and automation solutions to support a wide range of security appliances.* Designed, built and led the daily development of an entire automation platform for Firewalls, Proxies, and other security devices in the network* Developed a complete, distributed job-queue system* Implemented a customized SSH layer within the application using Apache MINA and SSHD libraries to ensure up-to-date security and compatibility with various device appliances* Developed an application plugin system using OSGi and its service registry facilities* Participated in multiple hiring initiatives to grow our team, developing and executing technical parts of the interviews themselves* Developed an entire web application for the automation application using AngularJS and JEE platforms * Implemented the application's authorization and authentication using standard JEE security mechanisms and integrated it to enterprise authorization systems* Worked directly on large initiative to deploy 802.1x company-wide, including developing a component to provide initial profiling of newly connected network devices* Developed automation solutions for security devices using Java, Scala and Perl languages* Hands-on experience with remote device interaction and automation\n            \n\n    \n    \n\n    \n        \n\n          \n    \n  \n        "
+                }
+            ]
+        },
+        {
+            "Company": "Technisource",
+            "CompanyImage": "https://media.licdn.com/dms/image/v2/D4D0BAQFGu9BASIsciA/company-logo_100_100/company-logo_100_100/0/1707500185479/technisource_logo?e=2147483647\u0026v=beta\u0026t=nQ7P8dj8KMcSUz3yDvAKEw5cyFaeZye3X31SRJo54Hk",
+            "Positions": [
+                {
+                    "Title": "IT Security Engineer at Wells Fargo",
+                    "StartDate": "Feb 2010",
+                    "EndDate": "Aug 2010",
+                    "Location": "Winston-Salem, North Carolina, United States",
+                    "Description": "Contractor in Network Security group.\n\n* Developed and deployed software solutions to automate processes and enforce internal security compliance\n* Performed audit of existing automation systems to build documentation and requirements for a next-generation automation solution\n* Hired into a full-time position after six months as a contractor"
+                }
+            ]
+        },
+        {
+            "Company": "A3 IT Solutions",
+            "CompanyImage": "https://media.licdn.com/dms/image/v2/C510BAQFLJaS8ivxdqw/company-logo_100_100/company-logo_100_100/0/1631318443534?e=2147483647\u0026v=beta\u0026t=XwWrXfSRJ65xWlxraYvLnaMSPqhRdJ1JJ9pxzCIQaLk",
+            "Positions": [
+                {
+                    "Title": "Senior Engineer - Software and Linux Solutions",
+                    "StartDate": "Sep 2006",
+                    "EndDate": "Feb 2010",
+                    "Location": "Greensboro, North Carolina, United States",
+                    "Description": "\n          Software engineer specializing in FOSS solutions and almost solely responsible for the development and maintenance of a website for a major retail real estate developer.* Worked directly with billable customer contacts to gather requirements and plan for the completion of work on schedule* Completed a rewrite of an existing Perl-base web site to the Catalyst web platform* Built a shopping cart with checkout and payment gateway interaction for customers to buy merchant gift cards* Worked extensively to scale the website and underlying infrastructure to be able to satisfy the demands of seasonal holiday shopping traffic* Participated in software development work with a partner company on a geo-location application marketed toward emergency response agencies* Worked to adapt an existing codebase to interface with new hardware as well to develop a completely new 3D mapping interface using the Nasa World Wind library\n            \n\n    \n    \n\n    \n        \n\n          \n    \n  \n        "
+                }
+            ]
+        },
+        {
+            "Company": "NAVAIR",
+            "CompanyImage": "https://media.licdn.com/dms/image/v2/C560BAQEFYJg7y1weLA/company-logo_100_100/company-logo_100_100/0/1630566527212/naval_air_systems_command_logo?e=2147483647\u0026v=beta\u0026t=LtxWu4TFL13XDko9AYdEzmWN1-A6U9XgNZJFHe9MKfc",
+            "Positions": [
+                {
+                    "Title": "Electronics Engineer - NADEP Cherry Point",
+                    "StartDate": "Jun 2003",
+                    "EndDate": "Aug 2006",
+                    "Location": "Marine Corps Air Station Cherry Point",
+                    "Description": "\n          Avionics Engineer on USMC/Navy C-130 aircraft. * Worked with DECM (Defensive Electronics Counter-Measures) systems* Key participant in several projects to deploy the KC-130J models for the war-time deployment with the Marine Corps* Worked directly on an avionics engineering and installation effort on the first KC-130J aircraft to fly into combat for the Marine Corps* Participated in on-site meetings with US Air Force and Lockheed Martin during KC-130J planning and execution* Engaged in several projects related to a major organization realignment and workflow software deployment* Worked directly with business and vendor representatives to help ensure success of new workflow software\n            \n\n    \n    \n\n    \n        \n\n          \n    \n  \n        "
+                }
+            ]
+        }
+    ],
+    "Education": [
+        {
+            "Title": "University of North Carolina at Charlotte",
+            "Subtitle": "BSEE Electrical Engineering",
+            "StartDate": "1998",
+            "EndDate": "2003",
+            "Description": "* Dean's List (4 of 8 semesters)\n* Participated in career-related summer internship after freshman year\n* Participated in career-related co-op at Duke Energy for 3 semester cycles"
+        }
+    ],
+    "Projects": [
+        {
+            "Title": "Micro-Segmentation Event Aggregator",
+            "StartDate": "Jun 2024",
+            "EndDate": "",
+            "Description": "\n          Part of an overall team implementing micro-segmentation across the enterprise. * Lead the design and development of a component to aggregate events from Illumio PCE product into a dataset for downstream business decisioning * Collaborated with peers and multiple teams in the development of several designs * Wrote a custom Mongo WriteModelStrategy for the Kafka Sink Connector for desired aggregation logic * Implemented using Cribl, Kafka w/ custom Connector, and MongoDB consuming 1.5TB/day * Helped develop and deploy a microservice API for querying data using Python+FastAPI\n            \n\n    \n    \n\n    \n        \n\n          \n    \n  \n        "
+        },
+        {
+            "Title": "Personal Portfolio Site",
+            "StartDate": "Aug 2024",
+            "EndDate": "Oct 2024",
+            "Description": "\n          * Developed an Angular based web site to provide some information about me and act as a demonstration of some of the technologies I have experience using* Site is automatically built, tested and deployed to Amazon S3 via Github Actions* Hosting is provided through Amazon Cloudflare providing HTTP frontend to S3 files* Site includes a page to render my resume based on data from my LinkedIn profile* LinkedIn profile data is loaded through a backend API written in Golang* The backend API project is built, tested and deployed using Google Cloud Build and Cloud Run services\n            \n\n    \n    \n\n    \n        \n\n          \n    \n  \n        "
+        },
+        {
+            "Title": "Application Security Remediation",
+            "StartDate": "Mar 2024",
+            "EndDate": "Oct 2024",
+            "Description": "* Worked directly to onboard software codebase to enterprise security scanning tools: ThreadFix, Checkmarx, Blackduck\n* Led our team through multiple phases of remediating a backlog of vulnerability detections from Blackduck and Checkmarx systems\n* Developed a custom process using JIRA ticket queues to help our team deal with the tickets in a logical way"
+        },
+        {
+            "Title": "JavaEE OAuth integration",
+            "StartDate": "Sep 2023",
+            "EndDate": "Dec 2023",
+            "Description": "\n          Worked to integrate and existing Java EE application with enterprise-adopted OAuth provider (PING) for authentication and authorization. * Developed javax.security HttpAuthenticationMechanism to integrate with PING for OAuth login * Users' roles in the application layer are derived from OAuth user-info callback * Annotations are used on JEE REST endpoints to control access based on the roles * The application's authorization rules remain decoupled from how the user was authenticated and how their roles are derived from OAuth\n            \n\n    \n    \n\n    \n        \n\n          \n    \n  \n        "
+        },
+        {
+            "Title": "Cloud Proxy Log Copying Automation",
+            "StartDate": "Jun 2023",
+            "EndDate": "Dec 2023",
+            "Description": "\n          * Developed custom software to perform copying of logs from a cloud vendor into on-premise enterprise logging infrastructure* Interacts with a vendor-specific public API using the Netty library for handling HTTP chunked response and custom data elements* Uses the Reactor java library to perform streaming uploads of log messages into Cribl HTTP Event Collector (HEC) API* Performs this task constantly to keep logs as up-to-date as possible* Regularly has performance of 10k messages a second or better\n            \n\n    \n    \n\n    \n        \n\n          \n    \n  \n        "
+        },
+        {
+            "Title": "Enterprise Data at Rest Encryption (DARE) Requirement",
+            "StartDate": "Dec 2022",
+            "EndDate": "Mar 2023",
+            "Description": "Directly planned and managed a project to apply DARE to our application's existing MySQL databases after mandated by enterprise requirements.\n* Planned out a complete project in JIRA to move encryption through all environments (DEV, TEST, PROD)\n* Drove engagements with enterprise data teams to apply the encryption through planned change activities\n* Completed the project on-time to meet enterprise requirements without any impact to the application"
+        },
+        {
+            "Title": "Device Automation DSL",
+            "StartDate": "Jan 2022",
+            "EndDate": "Dec 2022",
+            "Description": "* Developed a custom Domain Specific Language (DSL) in Groovy for device automation\n* DSL provided a simpler model for writing device automation within a larger automation framework\n* DSL had syntax for performing common device operations - like executing commands via SSH shell, etc."
+        },
+        {
+            "Title": "Gradle Project Conversion",
+            "StartDate": "Sep 2021",
+            "EndDate": "May 2022",
+            "Description": "\n          Personally developed and executed a project plan converting a large application build from Eclipse PDE to Gradle * Laid out stages of the conversion along with automation to minimize impact to the development team * Designed an organization structure in Gradle to allow for individual subprojects to build independently during the migration * Developed a custom Gradle plugin to read Eclipse classpath files and map entries to Gradle dependencies * Wrote a custom Gradle plugin to apply build dependencies globally from a source-controlled JSON file * Wrote Gradle tasks to output all subprojects as a composed Eclipse Update Site to allow for uninterrupted developer experience\n            \n\n    \n    \n\n    \n        \n\n          \n    \n  \n        "
+        },
+        {
+            "Title": "Nagios NRPE service inside Java JVM",
+            "StartDate": "Jan 2016",
+            "EndDate": "Dec 2016",
+            "Description": "* Developed a Java server implementation of the Nagios NRPE protocol\n* Used the Netty I/O framework to listen for connections and properly deal with the NRPE binary protocol packet\n* Allowed for Nagios monitoring to directly probe the JVM itself\n* Developed a system of pluggable NRPE handlers that could provide application specific monitoring data back to Nagios"
+        },
+        {
+            "Title": "Device Compliance Automation Application",
+            "StartDate": "Aug 2010",
+            "EndDate": "Dec 2012",
+            "Description": "\n          Designed, developed, and deployed an application within the Network Security group to provide centralized automation and configuration management for an array of network security appliances. The application was started in 2010 and is still in-use in production today.* Multi-tier app with backend written in Java and Scala using OSGi and JEE frameworks* Frontend written in JavaScript/CSS/HTML using Angular \u0026 Bootstrap* Grew into an application development team with as many as 5 members* Provided consistent and reliable automation across as many as 5000 network security devices* Firewalls, Proxies, Network Intrusion, and more\n            \n\n    \n    \n\n    \n        \n\n          \n    \n  \n        "
+        },
+        {
+            "Title": "N-Able Custom Agent",
+            "StartDate": "Sep 2009",
+            "EndDate": "Nov 2009",
+            "Description": "Designed and built a custom agent for collecting Apache server metrics into N-Able for monitoring\n* Developed as an External Data Feed (EDF) client using Java\n* Added a plugin system to make the EDF client modular allowing for data collection as needed"
+        },
+        {
+            "Title": "Web Application Scaling",
+            "StartDate": "Jun 2009",
+            "EndDate": "Nov 2009",
+            "Description": "\n          Developed a full-stack solution to scale a Perl/Catalyst web site to handle holiday traffic loads for a major real estate development firm.* Personally designed and implemented the entire solution* Used Apache as a reverse-proxy load-balancer and caching layer* Leveraged Linux Virtual Server (LVS) to provide resiliency between two Apache proxy instances* Deployed multiple backend Perl/Catalyst application instances to serve requests behind Apache* Scaled up MySQL database by building replica instances to spread readonly database calls across multiple servers* The entire system handled 10k+ requests/sec during black Friday holiday shopping hours to allow customers to access and print merchant-specific coupons offered through the firm's site\n            \n\n    \n    \n\n    \n        \n\n          \n    \n  \n        "
+        },
+        {
+            "Title": "PCI Compliant Logging Infrastructure",
+            "StartDate": "Mar 2007",
+            "EndDate": "Jul 2007",
+            "Description": "Designed and built a custom logging server as part of a PCI Level 1 compliance effort\n* Used CIS Level-1 Benchmark for SuSE Linux as a hardening baseline\n* Built using syslog-ng and MySQL as a storage backend\n* Wrote PERL automation to rotate logs in an efficient way through mysql tables based on date ranges\n* Included an archive facility to move older logs into compressed CSV\n* Integrated with Microsoft Windows to receive logs from IIS logs using Snare"
+        },
+        {
+            "Title": "Robotic Arm Senior Project",
+            "StartDate": "Jan 2002",
+            "EndDate": "Mar 2003",
+            "Description": "\n          Developed a system allowing a robotic arm to be remotely controlled over the internet. * Used an off-the-shelf robotic arm modified to be controlled by a PIC microcontroller * Programmed a PIC microcontroller integrated with an RS232 serial port to receive robot commands and translate them into relays to power the appropriate robot control input * Used an off-the-shelf web cam, physically local to the robot, to provide a video feed of the robot * Developed a client software component in Java to provide a graphical display of the remote web cam video and controls to manipulate the robot arm* Developed a complementary server-side software component, also written in Java, to transfer commands from the client software to the PIC microcontroller via a local serial port as well as provide the web cam's video feed via TCP/IP* Used Java libraries for RS232 hardware communications, webcam hardware communications. and graphical UI development\n            \n\n    \n    \n\n    \n        \n\n          \n    \n  \n        "
+        }
+    ],
+    "Certifications": [
+        {
+            "Title": "Microsoft Certified: Azure Fundamentals",
+            "Institution": "Microsoft",
+            "ImgUrl": "https://media.licdn.com/dms/image/v2/C560BAQE88xCsONDULQ/company-logo_100_100/company-logo_100_100/0/1630652622688/microsoft_logo?e=2147483647\u0026v=beta\u0026t=lMkCSsceJNmUG1r0VRg3Whye1sVi2KtYvt-MWyfoNbY",
+            "IssuedOn": "Oct 2022",
+            "ExpiresOn": ""
+        },
+        {
+            "Title": "GIAC Secure Software Programmer - Java",
+            "Institution": "GIAC Certifications",
+            "ImgUrl": "https://media.licdn.com/dms/image/v2/C4E0BAQG2G6BQacJB6w/company-logo_100_100/company-logo_100_100/0/1630607297722/giac_logo?e=2147483647\u0026v=beta\u0026t=evtNqRACp4_eJk5mssmfKIAd89QTWhzq9WCG9sUiOHs",
+            "IssuedOn": "May 2017",
+            "ExpiresOn": "May 2021"
+        }
+    ]
+}
