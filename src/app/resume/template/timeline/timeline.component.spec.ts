@@ -46,9 +46,9 @@ describe('TimelineComponent', () => {
   })
 
   it('should hide and unhide projects accordingly', () => {
-    component.hideProject(sampleLinkedInProfile.Projects[0])
+    component.hideProject(component.profile?.Projects[0])
     expect(component.profile?.Projects[0].hide).toBeTrue()
-    component.unhideProject(component.removedProjects[0])
+    component.unhideProject(component.profile?.Projects[0])
     expect(component.profile?.Projects[0].hide).toBeFalse()
   })
 });

@@ -66,7 +66,7 @@ export class TimelineComponent {
     "Automation/Scripting"
   ]
 
-  removedSkills = new Array<string>() 
+  removedSkills = new Array<string>()
 
   removeSkill(skill: string) {
     const idx = this.skills.indexOf(skill)
@@ -96,16 +96,18 @@ export class TimelineComponent {
   unhideProject(project: any) {
     if (this.profile) {
       const idx = this.profile.Projects.indexOf(project)
-      if (idx && idx >= 0) {
+      if (idx >= 0) {
         this.profile.Projects[idx].hide = false;
       }
     }
   }
 
   highlightProject(project: any) {
-    const idx = this.profile?.Projects.indexOf(project)
-    if (idx) {
-      transferArrayItem(this.profile?.Projects as LinkedinProject[], this.highlightedProjects, idx, idx)
+    if (this.profile) {
+      const idx = this.profile.Projects.indexOf(project)
+      if (idx >= 0) {
+        transferArrayItem(this.profile?.Projects as LinkedinProject[], this.highlightedProjects, idx, idx)
+      }
     }
   }
 
