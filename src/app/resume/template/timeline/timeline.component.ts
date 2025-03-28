@@ -10,6 +10,7 @@ import {
   moveItemInArray,
   transferArrayItem
 } from '@angular/cdk/drag-drop';
+import { LinkedinProfile, LinkedinProject } from '../../../service/linkedin.service';
 
 @Component({
   selector: 'resume-timeline',
@@ -20,11 +21,11 @@ import {
 })
 export class TimelineComponent {
   @Input()
-  profile: any | undefined
+  profile: LinkedinProfile | undefined
 
-  highlightedProjects = new Array<any>()
+  highlightedProjects = new Array<LinkedinProject>()
 
-  removedProjects = new Array<any>()
+  removedProjects = new Array<LinkedinProject>()
 
   skills = [
     "Java",
@@ -32,12 +33,16 @@ export class TimelineComponent {
     "CI/CD",
     "Software Design & Testing",
     "Spring",
+    // "DNS/HTTP/SSL/TLS",
+    "Apigee",
     "SDLC tools and practices",
     "Github",
+    "Code Security/SAST/SCA",
     "GCP",
     "Jenkins",
     "Team lead/coach",
-    "Capacity Planning",
+    // "SSH/SFTP/SCP",
+    // "Capacity Planning",
     "Harness",
     "Full-stack development",
     "SOA & REST",
@@ -45,13 +50,18 @@ export class TimelineComponent {
     "Python",
     "Crypto libraries/algorithms",
     "Angular",
+    // "TCP/IP",
+    "IAM/OAuth/OIDC",
+    "Checkmarx",
+    "Black Duck",
     "Kafka",
     "Reactive Programming",
+    "DevOps",
     "Microservices",
     "AWS",
     "Golang",
     "Docker",
-    "Logging",
+    "Logging/Monitoring",
     "MongoDB",
     "Automation/Scripting"
   ]
@@ -68,31 +78,41 @@ export class TimelineComponent {
   }
 
   removeProject(project: any) {
-    const idx = this.profile?.Projects.indexOf(project)
-    transferArrayItem(this.profile?.Projects, this.removedProjects, idx, idx)
+    if (this.profile) {
+      const idx = this.profile.Projects.indexOf(project)
+      transferArrayItem(this.profile.Projects as LinkedinProject[], this.removedProjects, idx, idx)
+    }
   }
 
   hideProject(project: any) {
-    const idx = this.profile?.Projects.indexOf(project)
-    if (idx >= 0) {
-      this.profile.Projects[idx].hide = true;
+    if (this.profile) {
+      const idx = this.profile.Projects.indexOf(project)
+      if (idx >= 0) {
+        this.profile.Projects[idx].hide = true;
+      }
     }
   }
 
   unhideProject(project: any) {
-    const idx = this.profile?.Projects.indexOf(project)
-    if (idx >= 0) {
-      this.profile.Projects[idx].hide = false;
+    if (this.profile) {
+      const idx = this.profile.Projects.indexOf(project)
+      if (idx >= 0) {
+        this.profile.Projects[idx].hide = false;
+      }
     }
   }
 
   highlightProject(project: any) {
-    const idx = this.profile?.Projects.indexOf(project)
-    transferArrayItem(this.profile?.Projects, this.highlightedProjects, idx, idx)
+    if (this.profile) {
+      const idx = this.profile.Projects.indexOf(project)
+      if (idx >= 0) {
+        transferArrayItem(this.profile?.Projects as LinkedinProject[], this.highlightedProjects, idx, idx)
+      }
+    }
   }
 
   unHighlightProject(project: any) {
     const idx = this.highlightedProjects.indexOf(project)
-    transferArrayItem(this.highlightedProjects, this.profile?.Projects, idx, idx)
+    transferArrayItem(this.highlightedProjects, this.profile?.Projects as LinkedinProject[], idx, idx)
   }
 }

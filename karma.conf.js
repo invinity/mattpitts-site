@@ -35,6 +35,11 @@ module.exports = function (config) {
     },
     reporters: ['progress', 'kjhtml'],
     browsers: ['Chrome'],
-    restartOnFileChange: true
+    restartOnFileChange: true,
+    files: [
+      'src/**/*.spec.ts',
+      'src/**/*.ts',
+      { pattern: 'src/assets/**/*.json', included: false, served: true },
+    ],
   });
 };

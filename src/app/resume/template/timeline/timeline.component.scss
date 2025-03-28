@@ -150,6 +150,10 @@ ul.skills>li>span {
     page-break-after: always;
 }
 
+.nopagebreak {
+    page-break-inside: avoid;
+}
+
 .action-icon {
     cursor: pointer;
     transform: scale(1.2);

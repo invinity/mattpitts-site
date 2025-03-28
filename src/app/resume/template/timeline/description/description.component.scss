@@ -5,3 +5,13 @@
     font-size: 12px;
     line-height: 16px;
 }
+
+.hidden {
+    text-decoration: line-through;
+}
+
+@media print {
+    .hidden {
+        display: none;
+    }
+}
