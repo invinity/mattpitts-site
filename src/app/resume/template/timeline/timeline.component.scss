@@ -159,16 +159,6 @@ ul.skills>li>span {
     transform: scale(1.2);
 }
 
-.hidden {
-    text-decoration: line-through;
-}
-
-@media print {
-    .hidden {
-        display: none;
-    }
-}
-
 .noshow {
     display: none;
 }

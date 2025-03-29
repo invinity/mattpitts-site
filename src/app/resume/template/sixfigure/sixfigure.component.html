@@ -1,0 +1,114 @@
+<div class="resume">
+    <div class="resume-header" style="display: flex; justify-content: space-between;">
+        <div>
+            <h1 class="resume-name"><span *ngFor="let name of profile?.Name?.split(' ')">{{ name }}&nbsp;</span></h1>
+        </div>
+        <div class="resume-info-bar">
+            <ul>
+                <li>Kernersville, North Carolina <mat-icon class="vertically-top" [inline]="true">location_on</mat-icon></li>
+                <li>336.202.3913 <mat-icon class="vertically-top" [inline]="true">phone</mat-icon></li>
+                <li><a href="mailto:matt@gopitts.net">matt&#64;gopitts.net <mat-icon class="vertically-top"
+                            [inline]="true">email</mat-icon></a></li>
+                <li><a href="https://linkedin.com/in/mattpitts">https://linkedin.com/in/mattpitts <mat-icon
+                            class="vertically-top" [inline]="true">link</mat-icon></a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="resume-content">
+        <div class="resume-headline">{{ profile?.Headline }}</div>
+
+        <!-- skills -->
+        <div class="resume-section">
+            <div class="resume-section-name"><span class="larger-first-letter">Areas</span>&nbsp;of&nbsp;<span class="larger-first-letter">Expertise</span></div>
+            <div class="resume-section-content">
+                <ul class="skills" cdkDropList (cdkDropListDropped)="moveSkill($event)">
+                    @for (skill of skills; track skill) {
+                    <li cdkDrag (click)="toggleSkill(skill)" [ngClass]="{'hidden': hiddenSkills.includes(skill)}">
+                        <span>{{ skill }}</span>
+                        <!-- <mat-icon cdkDragHandle class="vertically-top action-icon noprint" [inline]="true"
+                            aria-label="Reorder this skill">drag_handle</mat-icon> -->
+                        <!-- <mat-icon class="vertically-top action-icon noprint" [inline]="true" (click)="hideSkill(skill)"
+                            aria-label="Remove this skill">close</mat-icon> -->
+                    </li>
+                    }
+                </ul>
+            </div>
+        </div>
+
+        <!-- career higlights -->
+        <div class="resume-section">
+            <div class="resume-section-name"><span class="larger-first-letter">Career</span>&nbsp;<span class="larger-first-letter">Highlights</span></div>
+            <div class="resume-section-content" cdkDropList>
+                <ul class="highlights">
+                    <li><span class="bold">Test Automation:</span></li>
+                    <li><span class="bold">Technical Leadership:</span> Regularly provide 1-1 coaching to peers on technical decisioning and problem-solving.</li>
+                    <li><span class="bold">Data Pipelining:</span>Owned and delivered an ETL pipeline to process 1.5TB/day of event data from a vendor platform.</li>
+                    <li><span class="bold">Software Delivery:</span>Owned and delivered 50+ individual software and tech solutions.</li>
+                    <li><span class="bold">Enterprise Architecture:</span>Designed and developed entire full-stack applications as well as more modern microservice APIs.</li>
+                    <li><span class="bold">Project Planning/Management:</span></li>
+                    <li><span class="bold">API Design/Development:</span>Built microservice API components in Springboot that became the prototype for the rest of team.</li>
+                </ul>
+                <!-- @for (i of highlightedProjects; track i) {
+                <div cdkDrag>
+                    <div>
+                        <div>
+                            {{ i.StartDate }} - {{ i.EndDate || "Present" }}
+                        </div>
+                    </div>
+                    <div>
+                        <div class="pull-right noprint">
+                            <mat-icon cdkDragHandle class="vertically-top action-icon" [inline]="true"
+                                aria-label="Reorder this project">drag_handle</mat-icon>
+                            <mat-icon class="vertically-top action-icon" [inline]="true" (click)="unHighlightProject(i)"
+                                aria-label="Un-Highlight this project">arrow_downward</mat-icon>
+                        </div>
+                        <div>{{ i.Title }}</div>
+                        <sixfigure-description [text]="i.Description"></sixfigure-description>
+                    </div>
+                </div>
+                } -->
+            </div>
+        </div>
+
+        <!-- experience -->
+        <div class="resume-section">
+            <div class="resume-section-name"><span class="larger-first-letter">Professional</span>&nbsp;<span class="larger-first-letter">Experience</span></div>
+            <div class="resume-section-content">
+                @for (experience of profile?.Experience; track experience) {
+                @for (position of experience.Positions; track position) {
+                <div class="position-header">
+                    <span class="bold">{{ position.Title }}</span>
+                    <span class="pull-right">
+                        <span class="institution-name">{{ experience.Company }}</span>
+                        |
+                        <span>
+                            {{ position.StartDate }} - {{ position.EndDate || "Present" }}
+                        </span>
+                        <!-- <span [hidden]="!position.Location">{{ position.Location }}</span> -->
+                    </span>
+                </div>
+                <div>
+                    <div class="position-description">
+                        <sixfigure-description [text]="position.Description"></sixfigure-description>
+                    </div>
+                </div>
+                }
+                }
+            </div>
+        </div>
+
+        <!-- education -->
+        <div class="resume-section">
+            <div class="resume-section-name"><span class="larger-first-letter">Education</span></div>
+            <div class="resume-section-content">
+                <ng-container *ngFor="let i of profile?.Education">
+                    <div>
+                        <span class="institution-name">{{ i.Subtitle }}</span>
+                        <span class="pull-right">{{ i.Title }} {{ i.StartDate }} - {{ i.EndDate || "Present" }}</span>
+                    </div>
+                </ng-container>
+            </div>
+        </div>
+    </div>
+</div>

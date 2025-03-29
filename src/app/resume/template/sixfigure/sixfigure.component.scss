@@ -1,0 +1,118 @@
+.resume {
+    color: #384347;
+    font-family: "Open Sans", Arial, Helvetica, "Noto Sans Devanagari", "Noto Sans CJK SC Thin", "Noto Sans SC", "Noto Sans Hebrew", sans-serif;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+}
+
+.resume-header {
+    margin: 0;
+    padding: 0;
+    background-color: #234c76;
+    color: white;
+}
+
+.resume-header a {
+    color: white;
+    text-decoration: none;
+}
+
+.resume-info-bar {
+    font-size: smaller;
+}
+
+.resume-info-bar ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.resume-info-bar ul li {
+    text-align: right;
+}
+
+.resume-name {
+    text-transform: uppercase;
+    margin-top: 0;
+    margin-left: 0;
+}
+
+.resume-name span {
+    display: inline-block;
+}
+
+.resume-name span::first-letter {
+    font-size: 125%;
+}
+
+.resume-content {
+    margin: 1em;
+}
+
+.resume-headline {
+    background-color: #e3e9f6;
+    border-radius: .5em;
+    padding: 0.5em;
+    font-weight: bold;
+    font-size: smaller;
+    color: #768cac;
+    text-align: center;
+}
+
+.resume-section {
+    margin-bottom: 1em;
+    padding-top: .25em;
+    font-size: smaller;
+}
+
+.resume-section-name {
+    font-weight: bold;
+    color: #6c90b4;
+    text-transform: uppercase;
+    margin-top: 0;
+    margin-bottom: 1em;
+    border-bottom: 2px solid rgba(101, 105, 109, .5);
+}
+
+.position-description {
+    padding-left: 1em;
+}
+
+ul.skills {
+    font-size: smaller;
+    columns: 4;
+    -webkit-columns: 4;
+    -moz-columns: 4;
+
+}
+
+ul.skills>li {
+    list-style: none;
+}
+
+ul.skills>li:before {
+    content: '✓ ';
+}
+
+ul.highlights {
+    padding: 0 .5em;
+    list-style: none;
+}
+
+.position-header {
+    background-color: rgb(213, 227, 231);
+    border-radius: .25em;
+    padding: 0.25em;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+span.larger-first-letter {
+    display: inline-block;
+}
+
+.larger-first-letter::first-letter {
+    font-size: 125%;
+}

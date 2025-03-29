@@ -49,6 +49,16 @@ h4 {
   }
 }
 
+.hidden {
+  text-decoration: line-through;
+}
+
+@media print {
+  .hidden {
+      display: none;
+  }
+}
+
 .vertically-top {
   vertical-align: top;
 }

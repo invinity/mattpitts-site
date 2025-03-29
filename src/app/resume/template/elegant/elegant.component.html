@@ -15,17 +15,15 @@
 
             <div class="resume-section-name">Skills</div>
             <div>
-                <ul class="skills">
-                    <li>Java</li>
-                    <li>Linux</li>
-                    <li>Team Lead</li>
-                    <li>Continuous Delivery</li>
-                    <li>Continuous Integration</li>
-                    <li>Software Security</li>
-                    <li>AWS</li>
-                    <li>GCP</li>
-                    <li>Python</li>
-                    <li>Golang</li>
+                <ul class="skills" cdkDropList (cdkDropListDropped)="moveSkill($event)">
+                    @for (skill of skills; track skill) {
+                    <li cdkDrag><span>{{ skill }}</span>
+                        <mat-icon cdkDragHandle class="vertically-top action-icon noprint" [inline]="true"
+                            aria-label="Reorder this skill">drag_handle</mat-icon>
+                        <mat-icon class="vertically-top action-icon noprint" [inline]="true"
+                            (click)="hideSkill(skill)" aria-label="Remove this skill">close</mat-icon>
+                    </li>
+                    }
                 </ul>
             </div>
 

@@ -1,0 +1,9 @@
+<div class="description-section">
+    <span>{{ heading }}</span>
+    <ul>
+        <li *ngFor="let b of bullets" [ngClass]="{'hidden': b.hidden}" class="bullet" (click)="toggleBullet(b)">{{ b.text }}<span class="pull-right noprint">
+                <mat-icon class="vertically-top action-icon" [inline]="true" (click)="toggleBullet(b)"
+                    aria-label="Remove this project">close</mat-icon>
+            </span></li>
+    </ul>
+</div>
