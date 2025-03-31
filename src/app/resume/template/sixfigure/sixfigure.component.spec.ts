@@ -30,10 +30,10 @@ describe('SixfigureComponent', () => {
   it('should hide and unhide skills accordingly', () => {
     const beforeSize = component.skills.length as number
     component.toggleSkill(component.skills[0])
-    expect(component.hiddenSkills).toHaveSize(1)
+    expect(component.skills[0].hidden).toBeTrue()
     expect(component.skills).toHaveSize(beforeSize)
     component.toggleSkill(component.skills[0])
-    expect(component.hiddenSkills).toHaveSize(0)
+    expect(component.skills[0].hidden).toBeFalse()
     expect(component.skills).toHaveSize(beforeSize)
   })
 
