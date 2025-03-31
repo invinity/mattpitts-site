@@ -7,7 +7,7 @@
 
 .resume-header {
     margin: 0;
-    padding: 0;
+    padding: .25em 1em;
     background-color: #234c76;
     color: white;
 }
@@ -94,6 +94,22 @@ ul.skills>li:before {
     content: '✓ ';
 }
 
+ul.certifications {
+    font-size: smaller;
+    columns: 2;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+
+}
+
+ul.certifications>li {
+    list-style: none;
+}
+
+ul.certifications>li:before {
+    content: '✓ ';
+}
+
 ul.highlights {
     padding: 0 .5em;
     list-style: none;
@@ -109,10 +125,21 @@ ul.highlights {
     font-weight: bold;
 }
 
+.underline {
+    text-decoration: underline;
+}
+
 span.larger-first-letter {
     display: inline-block;
 }
 
 .larger-first-letter::first-letter {
     font-size: 125%;
+}
+
+.split-columns {
+    grid-auto-columns: auto;
+    column-gap: 16px;
+    grid-auto-flow: column;
+    display: grid;
 }

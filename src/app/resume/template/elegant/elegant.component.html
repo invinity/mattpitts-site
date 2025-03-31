@@ -29,14 +29,14 @@
 
             <div class="resume-section-name">Certifications</div>
             <div *ngFor="let i of profile?.Certifications">
-                <div class="print-nopagebreak">
+                <div class="nopagebreak">
                     <div class="institution-name">{{ i.Title }}</div>
                     <div class="">{{ i.Institution }}</div>
                     <elegant-description [text]="i.Description"></elegant-description>
                 </div>
             </div>
 
-            <div class="print-nopagebreak">
+            <div class="nopagebreak">
                 <div class="resume-section-name">Projects</div>
                 <div *ngFor="let i of profile?.Projects">
                     <div class="position-title">{{ i.Title }}</div>
@@ -51,7 +51,7 @@
             <div class="resume-section-name">Experience</div>
             <div *ngFor="let experience of profile?.Experience">
                 <div *ngFor="let position of experience.Positions">
-                    <div class="print-nopagebreak">
+                    <div class="nopagebreak">
                         <div class="position-title">{{ position.Title }}</div>
                         <div class="institution-name">{{ experience.Company }}</div>
                         <div class="resume-subheader">
@@ -66,7 +66,7 @@
             </div>
             <div class="resume-section-name">Education</div>
             <div *ngFor="let i of profile?.Education">
-                <div class="print-nopagebreak">
+                <div class="nopagebreak">
                     <div>{{ i.Subtitle }}</div>
                     <div class="institution-name">{{ i.Title }}</div>
                     <div class="resume-subheader"><mat-icon class="vertically-top"

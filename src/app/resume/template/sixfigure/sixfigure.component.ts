@@ -11,6 +11,7 @@ import {
 } from '@angular/cdk/drag-drop';
 import { DescriptionComponent } from '../sixfigure/description/description.component';
 import { NgClass, NgFor } from '@angular/common';
+import { MyHighlightsService, Skill, Highlight } from '../../../service/my-highlights.service';
 
 @Component({
   selector: 'resume-sixfigure',
@@ -23,24 +24,26 @@ export class SixfigureComponent {
   @Input()
   profile: LinkedinProfile | undefined
 
-  @Input()
-  skills: string[] = []
-
-  hiddenSkills: string[] = []
+  skills: Skill[] = []
+  highlights: Highlight[] = []
 
   highlightedProjects = new Array<LinkedinProject>()
 
-  toggleSkill(skill: string) {
-    const idx = this.hiddenSkills.indexOf(skill)
-    if (idx >= 0) {
-      this.hiddenSkills.splice(idx, 1)
-    } else {
-      this.hiddenSkills.push(skill)
-    }
+  constructor(private myHighlights: MyHighlightsService) {
+    this.skills = this.myHighlights.skills
+    this.highlights = this.myHighlights.highlights
   }
 
-  moveSkill(event: CdkDragDrop<string[]>) {
+  toggleSkill(skill: Skill) {
+    skill.hidden = !skill.hidden
+  }
+
+  moveSkill(event: CdkDragDrop<Skill[]>) {
     moveItemInArray(this.skills, event.previousIndex, event.currentIndex);
+  }
+
+  toggleHighlight(h: Highlight) {
+    h.hidden = !h.hidden
   }
 
   highlightProject(project: any) {
