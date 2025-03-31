@@ -7,10 +7,12 @@
             <ul>
                 <li>Kernersville, North Carolina <mat-icon class="vertically-top" [inline]="true">location_on</mat-icon>
                 </li>
-                <li>336.202.3913 <mat-icon class="vertically-top" [inline]="true">phone</mat-icon></li>
+                <li><a href="tel:+336.202.3913">336.202.3913 <mat-icon class="vertically-top" [inline]="true">phone</mat-icon></a></li>
                 <li><a href="mailto:matt@gopitts.net">matt&#64;gopitts.net <mat-icon class="vertically-top"
                             [inline]="true">email</mat-icon></a></li>
                 <li><a href="https://linkedin.com/in/mattpitts">https://linkedin.com/in/mattpitts <mat-icon
+                            class="vertically-top" [inline]="true">link</mat-icon></a></li>
+                <li><a href="https://matt.gopitts.net">https://matt.gopitts.net <mat-icon
                             class="vertically-top" [inline]="true">link</mat-icon></a></li>
             </ul>
         </div>
@@ -45,7 +47,8 @@
             <div class="resume-section-content" cdkDropList>
                 <ul class="highlights">
                     @for (highlight of highlights; track highlight) {
-                    <li (click)="toggleHighlight(highlight)" [ngClass]="{'hidden': highlight.hidden}"><span class="bold underline">{{highlight.category}}:</span>&nbsp;<span>{{
+                    <li (click)="toggleHighlight(highlight)" [ngClass]="{'hidden': highlight.hidden}"><span
+                            class="bold underline">{{highlight.category}}:</span>&nbsp;<span>{{
                             highlight.text }}</span></li>
                     }
                 </ul>

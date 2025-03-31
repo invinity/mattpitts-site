@@ -13,7 +13,8 @@ export class MyHighlightsService {
     { category: 'CI/CD', text: "5+ years with enterprise CI/CD tools; inc. Jenkins, uDeploy, Harness, Blackduck, Checkmarx, etc." },
     { category: 'Software Design', text: "20+ years doing software design; from object-oriented to clean-architecture, to TDD and more" },
     { category: 'Code Performance', text: "Wrote a Nagios NRPE server in Java that was 100s of times faster than the original C daemon" },
-    { category: 'Test Coverage', text: "Drove test coverage up 20% on a hertiage project and coached the team to achieve >90% on new code" },
+    { category: 'Test Coverage', text: "Drove test coverage up 20% on a heritage project and coached the team to achieve >90% on new code" },
+    { category: 'Observability Solutioning', text: "Delivered event-copying software in Java using Netty+Reactor achieving 10k events/second" },
     { category: 'Storage', text: "Developed solutions backed by SQL, NoSQL, object-storage, caching, and more" },
     { category: 'Technical Leadership', text: "Regularly provide 1-1 coaching to peers on technical decisioning and problem-solving" },
     { category: 'Data Pipelining', text: "Developed ETL pipeline w/ Cribl+Kafka+Java+MongoDB to process 1.5TB/day from a security platform" },
@@ -22,7 +23,7 @@ export class MyHighlightsService {
     { category: 'FrontEnd Development', text: "Worked with server-side and client-side models and tools, inc. 8+ years with Angular" },
     { category: 'Project Management', text: "Regular participant in roadmap/project planning and milestone tracking" },
     { category: 'API Design/Development', text: "Built microservice API components in Springboot that became the prototype for the rest of team" },
-    { category: 'Cloud', text: "Hands-on work with private and public cloud; inc. Tanzu, AWS, GCP, ECS, Fargate, S3" },
+    { category: 'Public/Private Cloud', text: "First in our team to deliver microservice component into on-prem production Tanzu environment" },
     { category: 'AuthN/AuthZ', text: "Developed application-level RBAC and OIDC integration with outside OAuth system (PING)" },
   ]
 
@@ -64,7 +65,7 @@ export class MyHighlightsService {
     { name: "Golang" },
     { name: "Netty" },
     { name: "Docker" },
-    { name: "Logging/Monitoring" },
+    { name: "Observability/Monitoring" },
     { name: "MongoDB" },
     { name: "Automation/Scripting" }
   ]

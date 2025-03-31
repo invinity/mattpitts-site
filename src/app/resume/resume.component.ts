@@ -1,21 +1,21 @@
+import { JsonPipe, NgIf } from '@angular/common';
 import { Component, Inject, OnInit } from '@angular/core';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatSelectModule } from '@angular/material/select';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { LINKEDIN_SERVICE, LinkedinService } from '../service/linkedin.service';
 import { ElegantComponent } from './template/elegant/elegant.component';
-import { TimelineComponent } from "./template/timeline/timeline.component";
-import { MatButtonModule } from '@angular/material/button';
-import { MatCardModule } from '@angular/material/card';
-import {MatSelectModule} from '@angular/material/select';
-import {MatInputModule} from '@angular/material/input';
-import {MatFormFieldModule} from '@angular/material/form-field';
-import { JsonPipe } from '@angular/common';
 import { SixfigureComponent } from './template/sixfigure/sixfigure.component';
+import { TimelineComponent } from "./template/timeline/timeline.component";
 
 @Component({
   selector: 'app-resume',
   standalone: true,
-  imports: [ElegantComponent, MatProgressBarModule, TimelineComponent, MatButtonModule, MatCardModule, MatInputModule, MatFormFieldModule, MatSelectModule, JsonPipe, SixfigureComponent ],
+  imports: [ElegantComponent, MatProgressBarModule, TimelineComponent, MatButtonModule, MatCardModule, MatInputModule, MatFormFieldModule, MatSelectModule, JsonPipe, SixfigureComponent, NgIf],
   templateUrl: './resume.component.html',
   styleUrl: './resume.component.scss'
 })
