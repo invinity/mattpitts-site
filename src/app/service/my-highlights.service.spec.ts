@@ -15,10 +15,10 @@ describe('MyHighlightsService', () => {
   });
 
   it('should have highlights defined', () => {
-    expect(service.highlights).toHaveSize(14);
+    expect(service.highlights).toHaveSize(15);
   });
 
   it('should have skills defined', () => {
-    expect(service.skills).toHaveSize(39);
+    expect(service.skills).toHaveSize(36);
   });
 });
