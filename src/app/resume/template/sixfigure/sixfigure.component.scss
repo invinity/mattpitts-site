@@ -62,7 +62,7 @@
 .resume-section {
     margin-bottom: 1em;
     padding-top: .25em;
-    font-size: smaller;
+    font-size: 10pt;
 }
 
 .resume-section-name {
@@ -79,11 +79,10 @@
 }
 
 ul.skills {
-    font-size: smaller;
+    font-size: 9pt;
     columns: 4;
     -webkit-columns: 4;
     -moz-columns: 4;
-
 }
 
 ul.skills>li {
@@ -95,7 +94,7 @@ ul.skills>li:before {
 }
 
 ul.certifications {
-    font-size: smaller;
+    font-size: 10pt;
     columns: 2;
     -webkit-columns: 2;
     -moz-columns: 2;
@@ -113,6 +112,7 @@ ul.certifications>li:before {
 ul.highlights {
     padding: 0 .5em;
     list-style: none;
+    font-size: 9.5pt;
 }
 
 .position-header {

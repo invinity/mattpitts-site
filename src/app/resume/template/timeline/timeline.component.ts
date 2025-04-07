@@ -48,22 +48,8 @@ export class TimelineComponent {
     }
   }
 
-  hideProject(project: any) {
-    if (this.profile) {
-      const idx = this.profile.Projects.indexOf(project)
-      if (idx >= 0) {
-        this.profile.Projects[idx].hide = true;
-      }
-    }
-  }
-
-  unhideProject(project: any) {
-    if (this.profile) {
-      const idx = this.profile.Projects.indexOf(project)
-      if (idx >= 0) {
-        this.profile.Projects[idx].hide = false;
-      }
-    }
+  toggleProject(project: LinkedinProject) {
+    project.hidden = !project.hidden
   }
 
   highlightProject(project: any) {

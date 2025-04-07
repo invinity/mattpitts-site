@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { LinkedinProfile, LinkedinProject } from '../../../service/linkedin.service';
+import { LinkedinCertification, LinkedinProfile, LinkedinProject } from '../../../service/linkedin.service';
 import { MatIcon } from '@angular/material/icon';
 import {
   CdkDragDrop,
@@ -58,5 +58,13 @@ export class SixfigureComponent {
   unHighlightProject(project: any) {
     const idx = this.highlightedProjects.indexOf(project)
     transferArrayItem(this.highlightedProjects, this.profile?.Projects as LinkedinProject[], idx, idx)
+  }
+
+  toggleCertification(c: LinkedinCertification) {
+    c.hidden = !c.hidden
+  }
+
+  moveCertification(event: CdkDragDrop<LinkedinCertification[]>) {
+    moveItemInArray(this.profile?.Certifications as LinkedinCertification[], event.previousIndex, event.currentIndex);
   }
 }

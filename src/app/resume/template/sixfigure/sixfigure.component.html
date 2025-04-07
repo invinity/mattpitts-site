@@ -76,9 +76,9 @@
 
         <!-- experience -->
         <div class="resume-section">
-            <div class="resume-section-name"><span class="larger-first-letter">Professional</span>&nbsp;<span
+            <div class="resume-section-name nopagebreak-after"><span class="larger-first-letter">Professional</span>&nbsp;<span
                     class="larger-first-letter">Experience</span></div>
-            <div class="resume-section-content">
+            <div class="resume-section-content nopagebreak-before">
                 @for (experience of profile?.Experience; track experience) {
                 @for (position of experience.Positions; track position) {
                 <div class="nopagebreak">
@@ -107,10 +107,10 @@
         <!-- certifications -->
         <div class="resume-section">
             <div class="resume-section-name"><span class="larger-first-letter">Certifications</span></div>
-            <div class="resume-section-content">
+            <div class="resume-section-content" cdkDropList (cdkDropListDropped)="moveCertification($event)">
                 <ul class="certifications">
-                    <li *ngFor="let i of profile?.Certifications">
-                        <span class="institution-name">{{ i.Title }}</span>
+                    <li *ngFor="let i of profile?.Certifications" cdkDrag (click)="toggleCertification(i)" [ngClass]="{'hidden': i.hidden}">
+                        <span class="institution-name">{{i.Institution }} - {{ i.Title }}</span>
                     </li>
                 </ul>
             </div>

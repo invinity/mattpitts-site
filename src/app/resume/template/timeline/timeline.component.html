@@ -104,21 +104,21 @@
         <div class="resume-section-content">
             @for (i of profile?.Projects; track i) {
             <div class="timeline">
-                <div class="timeline-info" [ngClass]="{'hidden': i.hide}">
+                <div class="timeline-info" [ngClass]="{'hidden': i.hidden}">
                     <div class="timeline-time">
                         {{ i.StartDate }} - {{ i.EndDate || "Present" }}
                     </div>
                 </div>
-                <div class="timeline-bar" [ngClass]="{'hidden': i.hide}">
+                <div class="timeline-bar" [ngClass]="{'hidden': i.hidden}">
                     <div class="dot"></div>
                     <div class="bar"></div>
                 </div>
-                <div class="timeline-detail" [ngClass]="{'hidden': i.hide}">
+                <div class="timeline-detail" [ngClass]="{'hidden': i.hidden}">
                     <div class="pull-right noprint">
-                        <mat-icon class="vertically-top action-icon" [inline]="true" (click)="hideProject(i)"
-                            aria-label="Hide this project" matTooltip="Hide this project" [ngClass]="{'noshow': i.hide}">cancel</mat-icon>
-                        <mat-icon class="vertically-top action-icon" [inline]="true" (click)="unhideProject(i)"
-                            aria-label="Un-Hide this project" matTooltip="Un-Hide this project" [ngClass]="{'noshow': !i.hide}">check_circle</mat-icon>
+                        <mat-icon class="vertically-top action-icon" [inline]="true" (click)="toggleProject(i)"
+                            aria-label="Hide this project" matTooltip="Hide this project" [ngClass]="{'noshow': i.hidden}">cancel</mat-icon>
+                        <mat-icon class="vertically-top action-icon" [inline]="true" (click)="toggleProject(i)"
+                            aria-label="Un-Hide this project" matTooltip="Un-Hide this project" [ngClass]="{'noshow': !i.hidden}">check_circle</mat-icon>
                         <mat-icon class="vertically-top action-icon" [inline]="true" (click)="highlightProject(i)"
                             aria-label="Highlight this project" matTooltip="Highlight this project">arrow_upward</mat-icon>
                     </div>

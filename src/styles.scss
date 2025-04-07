@@ -75,6 +75,14 @@ h4 {
   font-size: smaller;
 }
 
+.nopagebreak-after {
+  page-break-after: avoid;
+}
+
+.nopagebreak-before {
+  page-break-before: avoid;
+}
+
 :root,
 :host {
   --sys-background: #f7f9ff;
