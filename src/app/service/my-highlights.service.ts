@@ -13,6 +13,7 @@ export class MyHighlightsService {
     { category: 'Business Acumen', text: "Regularly work with business partners to translate needs into technical solutions" },
     { category: 'CI/CD', text: "Led team through adoption of multiple tools; inc. Jenkins, uDeploy, Harness, Blackduck, Checkmarx, etc." },
     { category: 'Software Design', text: "Broad software design experience; OOP, TTD, clean-architecture, functional programming and more" },
+    { category: 'Domain Specific Languages', text: "Developed Groovy DSL for device automation tasks like executing CLI commands" },
     { category: 'Code Performance', text: "Wrote a Nagios NRPE server in Java that was 100x faster than the original C daemon" },
     { category: 'Test Coverage', text: "Drove test coverage up 20% on a heritage project and coached the team to achieve >90% on new code" },
     { category: 'Automated Testing', text: "Integrated enterprise CI/CD pipeline with pytest to get test results reported in Jenkins"},

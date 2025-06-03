@@ -52,25 +52,6 @@
                             highlight.text }}</span></li>
                     }
                 </ul>
-                <!-- @for (i of highlightedProjects; track i) {
-                <div cdkDrag>
-                    <div>
-                        <div>
-                            {{ i.StartDate }} - {{ i.EndDate || "Present" }}
-                        </div>
-                    </div>
-                    <div>
-                        <div class="pull-right noprint">
-                            <mat-icon cdkDragHandle class="vertically-top action-icon" [inline]="true"
-                                aria-label="Reorder this project">drag_handle</mat-icon>
-                            <mat-icon class="vertically-top action-icon" [inline]="true" (click)="unHighlightProject(i)"
-                                aria-label="Un-Highlight this project">arrow_downward</mat-icon>
-                        </div>
-                        <div>{{ i.Title }}</div>
-                        <sixfigure-description [text]="i.Description"></sixfigure-description>
-                    </div>
-                </div>
-                } -->
             </div>
         </div>
 
