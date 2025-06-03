@@ -11,7 +11,7 @@ export type LinkedinTimelineEntry = {
   StartDate: string,
   EndDate: string,
   Description: string,
-  hide: boolean
+  hidden?: boolean
 }
 
 export type LinkedinEducation = LinkedinTimelineEntry & {
@@ -37,6 +37,7 @@ export type LinkedinCertification = {
   ImgUrl: string,
   IssuedOn: string,
   ExpiresOn: string,
+  hidden?: boolean
 }
 
 export type LinkedinProfile = {

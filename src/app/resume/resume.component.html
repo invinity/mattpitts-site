@@ -1,10 +1,15 @@
 <div class="resume-container">
-    <div class="resume" [hidden]="profileLoaded"><mat-progress-bar mode="indeterminate"></mat-progress-bar>Rendering
+    <mat-card *ngIf="!profileLoaded" class="noprint resume-loading">
+        <mat-card-header><mat-card-title>Resume Loading</mat-card-title></mat-card-header>
+        <mat-card-content>
+            <mat-progress-bar mode="indeterminate"></mat-progress-bar>Rendering
         resume. This can take up to one minute while retrieving my profile from LinkedIn, please be patient. Thanks!
-    </div>
-    <div class="resume" [hidden]="!profileLoaded">
-        <!-- <resume-elegant [profile]="profile"></resume-elegant> -->
-        <resume-timeline [profile]="profile"></resume-timeline>
+        </mat-card-content>
+    </mat-card>
+    <div class="resume" *ngIf="profileLoaded">
+        <!-- <resume-elegant [profile]="profile" [skills]="skills"></resume-elegant> -->
+        <!-- <resume-timeline [profile]="profile" [skills]="skills"></resume-timeline> -->
+        <resume-sixfigure [profile]="profile"></resume-sixfigure>
     </div>
     <mat-card class="noprint resume-controls">
         <mat-card-header><mat-card-title>Resume Controls</mat-card-title></mat-card-header>

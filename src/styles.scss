@@ -43,9 +43,23 @@ h4 {
   .mdc-snackbar {
     display: none !important;
   }
+}
 
-  .print-nopagebreak {
-    page-break-inside: avoid !important;
+.pagebreak {
+  page-break-after: always;
+}
+
+.nopagebreak {
+  page-break-inside: avoid;
+}
+
+.hidden {
+  text-decoration: line-through;
+}
+
+@media print {
+  .hidden {
+      display: none;
   }
 }
 
@@ -55,6 +69,18 @@ h4 {
 
 .pull-right {
   float: right;
+}
+
+.font-smaller {
+  font-size: smaller;
+}
+
+.nopagebreak-after {
+  page-break-after: avoid;
+}
+
+.nopagebreak-before {
+  page-break-before: avoid;
 }
 
 :root,

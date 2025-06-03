@@ -23,48 +23,12 @@ export class TimelineComponent {
   @Input()
   profile: LinkedinProfile | undefined
 
+  @Input()
+  skills: string[] = []
+
   highlightedProjects = new Array<LinkedinProject>()
 
   removedProjects = new Array<LinkedinProject>()
-
-  skills = [
-    "Java",
-    "Scala",
-    "CI/CD",
-    "Software Design & Testing",
-    "Spring",
-    // "DNS/HTTP/SSL/TLS",
-    "Apigee",
-    "SDLC tools and practices",
-    "Github",
-    "Code Security/SAST/SCA",
-    "GCP",
-    "Jenkins",
-    "Team lead/coach",
-    // "SSH/SFTP/SCP",
-    // "Capacity Planning",
-    "Harness",
-    "Full-stack development",
-    "SOA & REST",
-    "RDBMS & SQL",
-    "Python",
-    "Crypto libraries/algorithms",
-    "Angular",
-    // "TCP/IP",
-    "IAM/OAuth/OIDC",
-    "Checkmarx",
-    "Black Duck",
-    "Kafka",
-    "Reactive Programming",
-    "DevOps",
-    "Microservices",
-    "AWS",
-    "Golang",
-    "Docker",
-    "Logging/Monitoring",
-    "MongoDB",
-    "Automation/Scripting"
-  ]
 
   removedSkills = new Array<string>()
 
@@ -84,22 +48,8 @@ export class TimelineComponent {
     }
   }
 
-  hideProject(project: any) {
-    if (this.profile) {
-      const idx = this.profile.Projects.indexOf(project)
-      if (idx >= 0) {
-        this.profile.Projects[idx].hide = true;
-      }
-    }
-  }
-
-  unhideProject(project: any) {
-    if (this.profile) {
-      const idx = this.profile.Projects.indexOf(project)
-      if (idx >= 0) {
-        this.profile.Projects[idx].hide = false;
-      }
-    }
+  toggleProject(project: LinkedinProject) {
+    project.hidden = !project.hidden
   }
 
   highlightProject(project: any) {

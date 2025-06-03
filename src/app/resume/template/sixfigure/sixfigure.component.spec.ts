@@ -1,20 +1,19 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { TimelineComponent } from './timeline.component';
+import { SixfigureComponent } from './sixfigure.component';
 import sampleLinkedInProfile from '../../../../assets/test-data/sample-linkedin-profile.json'
-import { LinkedinProfile, LinkedinTimelineEntry } from '../../../service/linkedin.service';
+import { LinkedinProfile } from '../../../service/linkedin.service';
 
-describe('TimelineComponent', () => {
-  let component: TimelineComponent;
-  let fixture: ComponentFixture<TimelineComponent>;
+describe('SixfigureComponent', () => {
+  let component: SixfigureComponent;
+  let fixture: ComponentFixture<SixfigureComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [TimelineComponent]
+      imports: [SixfigureComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(TimelineComponent);
+    fixture = TestBed.createComponent(SixfigureComponent);
     component = fixture.componentInstance;
     component.profile = sampleLinkedInProfile as LinkedinProfile
     fixture.detectChanges();
@@ -28,11 +27,14 @@ describe('TimelineComponent', () => {
     expect(component.profile).toBeDefined();
   })
 
-  it('should remove projects accordingly', () => {
-    const beforeSize = component.profile?.Projects.length as number
-    component.removeProject(sampleLinkedInProfile.Projects[0])
-    expect(component.removedProjects).toHaveSize(1)
-    expect(component.profile?.Projects.length).toEqual(beforeSize - 1)
+  it('should hide and unhide skills accordingly', () => {
+    const beforeSize = component.skills.length as number
+    component.toggleSkill(component.skills[0])
+    expect(component.skills[0].hidden).toBeTrue()
+    expect(component.skills).toHaveSize(beforeSize)
+    component.toggleSkill(component.skills[0])
+    expect(component.skills[0].hidden).toBeFalse()
+    expect(component.skills).toHaveSize(beforeSize)
   })
 
   it('should highlight and unhighlight projects accordingly', () => {
@@ -43,12 +45,5 @@ describe('TimelineComponent', () => {
     component.unHighlightProject(component.highlightedProjects[0])
     expect(component.highlightedProjects).toHaveSize(0)
     expect(component.profile?.Projects.length).toEqual(beforeSize)
-  })
-
-  it('should hide and unhide projects accordingly', () => {
-    component.toggleProject(component.profile?.Projects[0] as LinkedinTimelineEntry)
-    expect(component.profile?.Projects[0].hidden).toBeTrue()
-    component.toggleProject(component.profile?.Projects[0] as LinkedinTimelineEntry)
-    expect(component.profile?.Projects[0].hidden).toBeFalse()
   })
 });
