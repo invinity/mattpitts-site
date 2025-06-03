@@ -2,7 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { TimelineComponent } from './timeline.component';
 import sampleLinkedInProfile from '../../../../assets/test-data/sample-linkedin-profile.json'
-import { LinkedinProfile } from '../../../service/linkedin.service';
+import { LinkedinProfile, LinkedinTimelineEntry } from '../../../service/linkedin.service';
 
 describe('TimelineComponent', () => {
   let component: TimelineComponent;
@@ -46,9 +46,9 @@ describe('TimelineComponent', () => {
   })
 
   it('should hide and unhide projects accordingly', () => {
-    component.hideProject(component.profile?.Projects[0])
-    expect(component.profile?.Projects[0].hide).toBeTrue()
-    component.unhideProject(component.profile?.Projects[0])
-    expect(component.profile?.Projects[0].hide).toBeFalse()
+    component.toggleProject(component.profile?.Projects[0] as LinkedinTimelineEntry)
+    expect(component.profile?.Projects[0].hidden).toBeTrue()
+    component.toggleProject(component.profile?.Projects[0] as LinkedinTimelineEntry)
+    expect(component.profile?.Projects[0].hidden).toBeFalse()
   })
 });
